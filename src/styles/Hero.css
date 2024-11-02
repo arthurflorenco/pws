@@ -1,0 +1,14 @@
+.hero {
+    background-image: url(../assets/background.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+}
+
+@media only screen and (max-width: 767px) {
+    .hero {
+        background-image: url(../assets/background2.jpg);
+        /* Imagem para dispositivos móveis */
+    }
+}
+

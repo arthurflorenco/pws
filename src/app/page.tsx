@@ -2,6 +2,7 @@
 import { Hero } from "@/components/Hero";
 import { NavDesk } from "@/components/NavDesk";
 import { NavMobile } from "@/components/NavMobile";
+import { Plans } from "@/components/Plans";
 import { Promotion } from "@/components/Promotion";
 
 export default function Home() {
@@ -11,6 +12,7 @@ export default function Home() {
     <NavMobile />
     <Hero />
     <Promotion />
+    <Plans />
   </div>
   );
 }

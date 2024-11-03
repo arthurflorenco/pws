@@ -4,6 +4,7 @@ import { NavDesk } from "@/components/NavDesk";
 import { NavMobile } from "@/components/NavMobile";
 import { Plans } from "@/components/Plans";
 import { Promotion } from "@/components/Promotion";
+import { Text } from "@/components/Text";
 
 export default function Home() {
   return (
@@ -13,6 +14,7 @@ export default function Home() {
     <Hero />
     <Promotion />
     <Plans />
+    <Text />
   </div>
   );
 }

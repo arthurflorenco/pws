@@ -42,7 +42,7 @@ export const Hero = () => {
     }, []);
 
     return (
-        <div className='hero w-svw flex flex-col items-center justify-center -translate-y-16'>
+        <div className='hero min-h-screen w-svw flex flex-col items-center justify-center -translate-y-16'>
             <Image className='logo-rotate' src={logo} alt='logo' width={600} />
             <div className='md:space-x-5 flex flex-col md:flex-row'>
                 <button className='p-4 rounded-full bg-yellow-300 text-black w-[200px] font-extralight hover:bg-yellow-400'>Probetraining gefällig</button>

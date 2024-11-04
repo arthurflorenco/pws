@@ -4,10 +4,10 @@ import Card from './ui/Card'
 export const Plans = () => {
 
     const plans = [
-        { id: 1, name: "3 Monats Abonnement", price: 74, },
-        { id: 2, name: "6 Monats Abonnement", price: 65, },
-        { id: 3, name: "12 Monats Abonnement", price: 59, },
-        { id: 4, name: "1h Gruppentraining/ Lektion", price: 20 }
+        { id: 1, name: "3 Monats Abonnement", price: 74, about:"lorem" },
+        { id: 2, name: "6 Monats Abonnement", price: 65, about:"lorem"  },
+        { id: 3, name: "12 Monats Abonnement", price: 59, about:"lorem"  },
+        { id: 4, name: "Gruppentraining/ Lektion", price: 20, about:"1h training" }
     ]
 
     return (
@@ -17,7 +17,7 @@ export const Plans = () => {
             <p className='text-white text-md xl:text-xl text-end xl:text-center mt-4'>Wenn du von einem Mitglied weiterempfohlen wirst und dich anmeldest, bekommst du den ersten Monat gratis. So kannst du den Club in Ruhe ausprobieren und leicht ins Training starten!</p>
             <div className="flex justify-around items-center flex-wrap mt-10 px-5 xl:px-20">
                 {plans.map(item => (
-                    <Card key={item.id} name={item.name} price={item.price} />
+                    <Card key={item.id} name={item.name} price={item.price} about={item.about} />
                 ))}
             </div>
         </div>

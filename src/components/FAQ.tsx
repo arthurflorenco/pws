@@ -1,6 +1,7 @@
 'use client'
 
-import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "./ui/accordion"
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "./ui/Accordion"
+
 
 
 export const FAQ = () => {

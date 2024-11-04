@@ -13,7 +13,7 @@ export const Promotion = () => {
                     Komm vorbei und erlebe, wie viel Spaß Boxen machen kann!
                 </p>
             </div>
-            <div className=" w-full xl:w-[50%] p-2 mt-4 md:mt-0">
+            <div className=" w-full xl:w-[50%] p-2 md:p-14 xl:p-20 mt-4 md:mt-0">
                 <Image src={promotionImg}
                     alt="Boxer"
                     className="w-full rounded-xl h-full object-cover object-center"

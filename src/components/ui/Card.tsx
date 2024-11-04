@@ -4,9 +4,10 @@ import React from 'react';
 interface CardProps {
     name: string;
     price: number;
+    about: string;
   }
 
-const Card: React.FC<CardProps> = ({name, price}) => {
+const Card: React.FC<CardProps> = ({name, price, about}) => {
 
     return (
         <div className="flex flex-col bg-yellow-400 rounded-3xl flex-grow-[1] basis-[200] m-4">
@@ -16,7 +17,7 @@ const Card: React.FC<CardProps> = ({name, price}) => {
                         <h2 className="text-lg font-medium tracking-tighter text-gray-600 lg:text-3xl">
                             {name}
                         </h2>
-                        <p className="mt-2 text-sm text-gray-500">Suitable to grow steadily.</p>
+                        <p className="mt-2 text-sm text-gray-500">{about}</p>
                     </div>
                     <div className="mt-6">
                         <p>

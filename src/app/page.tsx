@@ -1,4 +1,5 @@
 'use client'
+import { FAQ } from "@/components/FAQ";
 import { Hero } from "@/components/Hero";
 import { NavDesk } from "@/components/NavDesk";
 import { NavMobile } from "@/components/NavMobile";
@@ -15,6 +16,7 @@ export default function Home() {
     <Promotion />
     <Plans />
     <Text />
+    <FAQ />
   </div>
   );
 }

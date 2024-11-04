@@ -1,3 +1,4 @@
+'use client'
 import Image from 'next/image'
 import '../styles/Text.css'
 import logo from '../assets/logo.png'

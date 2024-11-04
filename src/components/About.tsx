@@ -1,3 +1,4 @@
+'use client'
 import React from 'react'
 import woman from '../assets/woman.jpg'
 import {

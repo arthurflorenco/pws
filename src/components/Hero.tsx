@@ -30,9 +30,13 @@ export const Hero = () => {
                 start: 'top 80%',
                 end: 'bottom',
                 scrub: true,
-                //markers: true
             }
         });
+
+        gsap.to(['.btn1', '.btn2'], {
+            x: 0,
+            duration: 3
+        })
 
         // Retornar uma função de limpeza
         return () => {
@@ -42,11 +46,11 @@ export const Hero = () => {
     }, []);
 
     return (
-        <div className='hero min-h-screen w-svw flex flex-col items-center justify-center  mb-14 xl:mb-0'>
+        <div className='hero min-h-screen w-svw flex flex-col items-center justify-center mb-14 xl:mb-0'>
             <Image className='logo-rotate' src={logo} alt='logo' width={600} />
             <div className='md:space-x-5 flex flex-col md:flex-row'>
-                <button className='p-4 rounded-full bg-yellow-300 text-black w-[200px] font-extralight hover:bg-yellow-400'>Probetraining gefällig</button>
-                <button className='p-4 rounded-full bg-transparent border-[1px] border-yellow-300 text-yellow-300 w-[200px] font-extralight hover:bg-yellow-400 hover:border-yellow-400 hover:text-black mt-4 md:mt-0'>Komm vorbei</button>
+                <button className='p-4 rounded-full bg-yellow-300 text-black w-[200px] font-extralight hover:bg-yellow-400 btn1'>Probetraining gefällig</button>
+                <button className='p-4 rounded-full bg-transparent border-[1px] border-yellow-300 text-yellow-300 w-[200px] font-extralight hover:bg-yellow-400 hover:border-yellow-400 hover:text-black mt-4 md:mt-0 btn2'>Komm vorbei</button>
             </div>
         </div>
     )

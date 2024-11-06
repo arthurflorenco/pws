@@ -1,38 +1,61 @@
 'use client'
-import React from 'react';
+import React from "react";
+import Link from "next/link";
 
-interface CardProps {
-    name: string;
-    price: number;
-    about: string;
-  }
+const Card: React.FC = () => {
 
-const Card: React.FC<CardProps> = ({name, price, about}) => {
+    const getNextClass = () => {
+        const now = new Date();
+        const dayOfWeek = now.getDay(); // 0 = Domingo, 1 = Segunda, ..., 6 = Sábado
+        const currentTime = now.getHours() * 60 + now.getMinutes(); // Tempo atual em minutos
+
+        // Horários das aulas em minutos
+        const classTimes = {
+            Tuesday: { time: '18:30', minutes: 18 * 60 + 30 },
+            Thursday: { time: '18:30', minutes: 18 * 60 + 30 },
+            Sunday: { time: '12:00', minutes: 12 * 60 },
+        };
+
+        // Determina a próxima aula
+        let nextClassDay = '';
+        let nextClassTime = '';
+
+        if (dayOfWeek === 2 && currentTime < classTimes.Tuesday.minutes) {
+            nextClassDay = 'Dienstag';
+            nextClassTime = classTimes.Tuesday.time;
+        } else if (dayOfWeek === 2 && currentTime >= classTimes.Tuesday.minutes) {
+            nextClassDay = 'Donnerstag';
+            nextClassTime = classTimes.Thursday.time;
+        } else if (dayOfWeek === 4 && currentTime < classTimes.Thursday.minutes) {
+            nextClassDay = 'Donnerstag';
+            nextClassTime = classTimes.Thursday.time;
+        } else if (dayOfWeek === 4 && currentTime >= classTimes.Thursday.minutes) {
+            nextClassDay = 'Sonntag';
+            nextClassTime = classTimes.Sunday.time;
+        } else if (dayOfWeek === 0 && currentTime < classTimes.Sunday.minutes) {
+            nextClassDay = 'Sonntag';
+            nextClassTime = classTimes.Sunday.time;
+        } else {
+            nextClassDay = 'Dienstag';
+            nextClassTime = classTimes.Tuesday.time;
+        }
+
+        return { day: nextClassDay, time: nextClassTime };
+    };
+
+    const { day, time } = getNextClass();
 
     return (
-        <div className="flex flex-col bg-yellow-400 rounded-3xl flex-grow-[1] basis-[200] m-4">
-            <div className="px-6 py-8 sm:p-10 sm:pb-6">
-                <div className="grid items-center justify-center w-full grid-cols-1 text-left">
-                    <div>
-                        <h2 className="text-lg font-medium tracking-tighter text-gray-600 lg:text-3xl">
-                            {name}
-                        </h2>
-                        <p className="mt-2 text-sm text-gray-500">{about}</p>
-                    </div>
-                    <div className="mt-6">
-                        <p>
-                            <span className="text-5xl font-light tracking-tight text-black">
-                                {price}.-
-                            </span>
-                            <span className="text-base font-medium text-gray-500"> /mo </span>
-                        </p>
-                    </div>
-                </div>
+        <div className="flex flex-col justify-between  w-full bg-gradient-to-b from-yellow-50 to-yellow-300 bg-opacity-70 backdrop-blur-md rounded-3xl md:m-4">
+            <div className="flex flex-col p-4">
+                <span className="font-bold text-neutral-500 text-3xl">Next Class</span>
+                <span className="font-bold text-lg text-neutral-400">{day}</span>
             </div>
-            <div className="flex px-6 pb-8 sm:px-8">
-                <a aria-describedby="tier-company" className="flex items-center justify-center w-full px-6 py-2.5 text-center text-white duration-200 bg-black border-2 border-black rounded-full nline-flex hover:bg-transparent hover:border-black hover:text-black focus:outline-none focus-visible:outline-black text-sm focus-visible:ring-black" href="#">
-                    Get started
-                </a>
+            <div className="flex justify-between items-end p-4">
+                <span className="text-5xl md:text-8xl font-bold text-neutral-600">{time}</span>
+                <Link href="">
+                    <button className="bg-neutral-200 bg-opacity-70 backdrop-blur-md p-3 text-neutral-400 rounded-lg">schedule</button>
+                </Link>
             </div>
         </div>
     );

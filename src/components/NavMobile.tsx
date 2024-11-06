@@ -1,10 +1,12 @@
 'use client'
 import Image from 'next/image'
 import Link from 'next/link'
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import logo from '../assets/logo.png'
 import icon from '../assets/contactIcon.png'
 import menu from '../assets/menu.svg'
+import gsap from "gsap";
+import '../styles/animations.css'
 
 export const NavMobile = () => {
 
@@ -14,8 +16,19 @@ export const NavMobile = () => {
         setIsOpen(!isOpen);
     }
 
+    useEffect(() => {
+        gsap.to('.navbar',{
+            duration: 0.8,
+            y: 0
+        })
+
+        return () => {
+            gsap.killTweensOf('.navbar')
+          }        
+    }, [])
+
     return (
-        <nav className={`bg-opacity-70 backdrop-blur-md z-50 px-6 py-3  bg-neutral-800  left-0 right-0   fixed xl:hidden text-yellow-300  mx-auto ${isOpen ? 'w-svw top-0 rounded-none' : 'top-3 w-[90%] rounded-3xl'}`}>
+        <nav className={`bg-opacity-70 backdrop-blur-md z-50 px-6 py-3  bg-neutral-800  left-0 right-0   fixed xl:hidden text-yellow-300 navbar mx-auto ${isOpen ? 'w-svw top-0 rounded-none' : 'top-3 w-[90%] rounded-3xl'}`}>
             <div className="container flex justify-between items-center w-full">
                 <div
                     onClick={toggleNavbar}
@@ -39,3 +52,5 @@ export const NavMobile = () => {
         </nav>
     )
 }
+
+

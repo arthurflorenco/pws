@@ -1,0 +1,73 @@
+/* prof.tsx */
+.card-prof {
+    transform: translateX(200px);
+}
+
+/* NavBar */
+
+.navbar {
+    transform: translateY(-100px);
+}
+
+/* Promotion.tsx */
+
+.titlePromotion {
+    transform: translateX(-999px);
+}
+
+.textPromotion {
+    transform: translateX(-999px);
+}
+
+
+.boxer {
+    transform: translateX(999px);
+}
+
+/* Plans */
+
+.titlePlans {
+    transform: translateY(400px);
+    z-index: -1;
+}
+
+.textPlans {
+    transform: translateY(400px);
+    z-index: -1;
+}
+
+/* About.tsx */
+
+.titleTime {
+    transform: translatex(-999px);
+}
+
+.textTime {
+    transform: translateY(400px);
+}
+
+.woman {
+    transform: translateY(400px);
+}
+
+.cardTime {
+    transform: translatex(-999px);
+}
+
+/* Prof.tsx */
+.cardProf {
+    transform: translateY(400px);
+}
+
+.titleProf{
+    transform: translateY(700px);
+}
+
+/* FAQ.tsx */
+.titleFAQ{
+    transform: translateY(300px);
+}
+
+.questionFAQ{
+    transform: translateX(999px);
+}

@@ -6,18 +6,22 @@ import { Hero } from "@/components/Hero";
 import { NavDesk } from "@/components/NavDesk";
 import { NavMobile } from "@/components/NavMobile";
 import { Plans } from "@/components/Plans";
+import { Profs } from "@/components/Profs";
 import { Promotion } from "@/components/Promotion";
 import { Testimonials } from "@/components/Testimonials";
-import { Text } from "@/components/Text";
+import { BackgroundBeamsWithCollision } from "@/components/ui/background-beams-with-collision";
+
 
 export default function Home() {
   return (
-    <div className="flex flex-col justify-center items-center bg-black overflow-hidden">
+
+    <div className="flex flex-col justify-center items-center bg-gradient-to-b from-neutral-800 to-black overflow-hidden">
       <NavDesk />
       <NavMobile />
       <Hero />
       <Promotion />
       <Plans />
+      <Profs />
       <About />
       <Testimonials />
       <FAQ />

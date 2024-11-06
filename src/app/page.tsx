@@ -9,7 +9,6 @@ import { Plans } from "@/components/Plans";
 import { Profs } from "@/components/Profs";
 import { Promotion } from "@/components/Promotion";
 import { Testimonials } from "@/components/Testimonials";
-import { BackgroundBeamsWithCollision } from "@/components/ui/background-beams-with-collision";
 
 
 export default function Home() {

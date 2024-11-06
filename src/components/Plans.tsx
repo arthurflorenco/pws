@@ -45,7 +45,7 @@ export const Plans = () => {
     }, [])
 
     const cards = data.map((card, index) => (
-        <Card key={card.src} card={card} index={index} />
+        <Card key={index} card={card} index={index} />
     ));
 
     return (

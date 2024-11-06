@@ -80,7 +80,7 @@ export const Carousel = ({ items, initialScroll = 0 }: CarouselProps) => {
         left: scrollPosition,
         behavior: "smooth",
       });
-      setCurrentIndex(index);
+      setCurrentIndex(index); // Atualiza o índice atual
     }
   };
 
@@ -127,7 +127,7 @@ export const Carousel = ({ items, initialScroll = 0 }: CarouselProps) => {
                   },
                 }}
                 key={"card" + index}
-                className="last:pr-[5%] md:last:pr-[33%]  rounded-3xl"
+                className="last:pr-[5%] md:last:pr-[33%] rounded-3xl"
               >
                 {item}
               </motion.div>
@@ -140,8 +140,7 @@ export const Carousel = ({ items, initialScroll = 0 }: CarouselProps) => {
             onClick={scrollLeft}
             disabled={!canScrollLeft}
           >
-            <IconArrowNarrowLeft className="h-6 ```tsx
-            w-6 text-gray-500" />
+            <IconArrowNarrowLeft className="h-6 w-6 text-gray-500" />
           </button>
           <button
             className="relative z-40 h-10 w-10 rounded-full bg-gray-100 flex items-center justify-center disabled:opacity-50"
@@ -150,6 +149,9 @@ export const Carousel = ({ items, initialScroll = 0 }: CarouselProps) => {
           >
             <IconArrowNarrowRight className="h-6 w-6 text-gray-500" />
           </button>
+        </div>
+        <div className="absolute bottom-0 left-0 p-4 text-white">
+          <p>Índice Atual: {currentIndex}</p>
         </div>
       </div>
     </CarouselContext.Provider>
@@ -214,7 +216,7 @@ export const Card = ({
               exit={{ opacity: 0 }}
               ref={containerRef}
               layoutId={layout ? `card-${card.title}` : undefined}
-              className="max-w-5xl mx-auto bg-white dark:bg-neutral-900 h-fit  z-[60] my-10 p-4 md:p-10 rounded-3xl font-sans relative"
+              className="max-w-5xl mx-auto bg-white dark:bg-neutral-900 h-fit z-[60] my-10 p-4 md:p-10 rounded-3xl font-sans relative"
             >
               <button
                 className="sticky top-4 h-8 w-8 right-0 ml-auto bg-black dark:bg-white rounded-full flex items-center justify-center"
@@ -244,7 +246,8 @@ export const Card = ({
         onClick={handleOpen}
         className="rounded-3xl bg-gray-100 dark:bg-neutral-900 h-80 w-56 md:h-[40rem] md:w-96 overflow-hidden flex flex-col items-start justify-start relative z-10"
       >
-        <div className="absolute h-full top-0 inset-x-0 bg-gradient-to-b from-black/50 via-transparent to-transparent z-30 pointer-events-none" />
+        <div className="absolute h-full top-0 inset-x
+        0 bg-gradient-to-b from-black/50 via-transparent to-transparent z-30 pointer-events-none" />
         <div className="relative z-40 p-8 h-full flex flex-col justify-between">
           <div>
             <motion.p

@@ -1,4 +1,4 @@
-'use client'
+"use client"
 import Image from 'next/image'
 import logo from '../assets/logo.png'
 import Link from 'next/link'
@@ -32,7 +32,7 @@ export const Footer = () => {
             </div>
             <div className='text-center mt-7'>
                 <p className='text-white text-sm md:text-md'>&copy; Copyright Pray Work Sleep Gym GmbH 2024</p>
-                <p className='text-white text-sm md:text-md mt-2'>Created by <Link href="https://florencoportfolio.netlify.app/" className='underline'>Florenço's Studio</Link></p>
+                <p className='text-white text-sm md:text-md mt-2'>Created by <Link href="https://florencoportfolio.netlify.app/" className='underline'>Florenço&#39;s Studio</Link></p>
             </div>
         </div>
     )

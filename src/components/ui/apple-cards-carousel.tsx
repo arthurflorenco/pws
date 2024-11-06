@@ -264,7 +264,6 @@ export const Card = ({
               <span className="text-5xl md:text-7xl font-light tracking-tight text-yellow-100">
                 {card.price}.-
               </span>
-              <span className="text-base font-medium text-neutral-500"> /mo </span>
             </p>
           </div>
         </div>

@@ -16,6 +16,8 @@ import { cn } from "@/lib/utils";
 import { AnimatePresence, motion } from "framer-motion";
 import Image, { ImageProps, StaticImageData } from "next/image";
 import { useOutsideClick } from "../../hooks/use-outside-click";
+import gsap from 'gsap'
+import ScrollTrigger from "gsap/ScrollTrigger";
 
 interface CarouselProps {
   items: JSX.Element[];
@@ -32,9 +34,9 @@ type Card = {
 
 export const CarouselContext = createContext<{
   onCardClose: (index: number) => void;
-  
+
 }>({
-  onCardClose: () => {},
+  onCardClose: () => { },
 
 });
 
@@ -89,7 +91,7 @@ export const Carousel = ({ items, initialScroll = 0 }: CarouselProps) => {
 
   return (
     <CarouselContext.Provider
-      value={{ onCardClose: handleCardClose}}
+      value={{ onCardClose: handleCardClose }}
     >
       <div className="relative w-full">
         <div
@@ -195,6 +197,23 @@ export const Card = ({
     setOpen(true);
   };
 
+  useEffect(() => {
+    gsap.registerPlugin(ScrollTrigger)
+
+
+    gsap.from('.items', {
+      textContent: `${card.price}`,
+      duration: 2,
+      ease: 'power1.in',
+      snap: { textContent: 1 },
+      stagger: 1,
+      scrollTrigger: {
+        trigger: '.card-plans',
+        start: 'top 80%',
+      }
+    });
+  }, []);
+
   return (
     <>
       <AnimatePresence>
@@ -240,7 +259,7 @@ export const Card = ({
       <motion.button
         layoutId={layout ? `card-${card.title}` : undefined}
         onClick={handleOpen}
-        className="rounded-3xl bg-gray-100 dark:bg-neutral-900 h-80 w-56 md:h-[40rem] md:w-96 overflow-hidden flex flex-col items-start justify-start relative z-10"
+        className="rounded-3xl bg-gray-100 dark:bg-neutral-900 h-80 w-56 md:h-[40rem] md:w-96 overflow-hidden flex flex-col items-start justify-start relative z-10 card-plans"
       >
         <div className="absolute h-full top-0 inset-x
         0 bg-gradient-to-b from-black/50 via-transparent to-transparent z-30 pointer-events-none" />
@@ -261,8 +280,10 @@ export const Card = ({
           </div>
           <div className="flex justify-end items-end">
             <p>
-              <span className="text-5xl md:text-7xl font-light tracking-tight text-yellow-100">
-                {card.price}.-
+              <span className="text-5xl md:text-7xl font-light tracking-tight text-yellow-100 items">
+                {card.price}
+              </span>
+              <span className="text-5xl md:text-7xl font-light tracking-tight text-yellow-100">.-
               </span>
             </p>
           </div>

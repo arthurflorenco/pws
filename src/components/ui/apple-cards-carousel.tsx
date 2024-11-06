@@ -32,17 +32,17 @@ type Card = {
 
 export const CarouselContext = createContext<{
   onCardClose: (index: number) => void;
-  currentIndex: number;
+  
 }>({
   onCardClose: () => {},
-  currentIndex: 0,
+
 });
 
 export const Carousel = ({ items, initialScroll = 0 }: CarouselProps) => {
   const carouselRef = useRef<HTMLDivElement>(null);
   const [canScrollLeft, setCanScrollLeft] = useState(false);
   const [canScrollRight, setCanScrollRight] = useState(true);
-  const [currentIndex, setCurrentIndex] = useState(0);
+
 
   useEffect(() => {
     if (carouselRef.current) {
@@ -80,7 +80,6 @@ export const Carousel = ({ items, initialScroll = 0 }: CarouselProps) => {
         left: scrollPosition,
         behavior: "smooth",
       });
-      setCurrentIndex(index); // Atualiza o índice atual
     }
   };
 
@@ -90,7 +89,7 @@ export const Carousel = ({ items, initialScroll = 0 }: CarouselProps) => {
 
   return (
     <CarouselContext.Provider
-      value={{ onCardClose: handleCardClose, currentIndex }}
+      value={{ onCardClose: handleCardClose}}
     >
       <div className="relative w-full">
         <div
@@ -150,9 +149,6 @@ export const Carousel = ({ items, initialScroll = 0 }: CarouselProps) => {
             <IconArrowNarrowRight className="h-6 w-6 text-gray-500" />
           </button>
         </div>
-        <div className="absolute bottom-0 left-0 p-4 text-white">
-          <p>Índice Atual: {currentIndex}</p>
-        </div>
       </div>
     </CarouselContext.Provider>
   );
@@ -169,7 +165,7 @@ export const Card = ({
 }) => {
   const [open, setOpen] = useState(false);
   const containerRef = useRef<HTMLDivElement>(null);
-  const { onCardClose, currentIndex } = useContext(CarouselContext);
+  const { onCardClose } = useContext(CarouselContext);
 
   const handleClose = useCallback(() => {
     setOpen(false);

@@ -18,7 +18,7 @@ export const NavMobile = () => {
 
     useEffect(() => {
         gsap.to('.navbar',{
-            duration: 0.8,
+            duration: 2,
             y: 0
         })
 

@@ -14,7 +14,8 @@ export const About = () => {
     useEffect(() => {
         gsap.registerPlugin(ScrollTrigger)
 
-        gsap.to('.woman', {
+        gsap.fromTo('.woman', { opacity: 0 }, {
+            opacity: 1,
             y: 0,
             scrollTrigger: {
                 trigger: '.timetables',
@@ -24,7 +25,8 @@ export const About = () => {
             }
         })
 
-        gsap.to('.cardTime', {
+        gsap.fromTo('.cardTime', { opacity: 0 }, {
+            opacity: 1,
             x: 0,
             scrollTrigger: {
                 trigger: '.cardTime',
@@ -34,7 +36,8 @@ export const About = () => {
             }
         })
 
-        gsap.to('.titleTime', {
+        gsap.fromTo('.titleTime', { opacity: 0 }, {
+            opacity: 1,
             x: 0,
             scrollTrigger: {
                 trigger: '.titleTime',
@@ -44,7 +47,8 @@ export const About = () => {
             }
         })
 
-        gsap.to('.textTime', {
+        gsap.fromTo('.textTime', { opacity: 0 }, {
+            opacity: 1,
             y: 0,
             scrollTrigger: {
                 trigger: '.titleTime',

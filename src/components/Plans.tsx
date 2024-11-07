@@ -15,7 +15,8 @@ export const Plans = () => {
 
     useEffect(() => {
         gsap.registerPlugin(ScrollTrigger)
-        gsap.to('.textPlans', {
+        gsap.fromTo('.textPlans',{opacity:0}, {
+            opacity:1,
             y: 0,
             duration: 3,
             zIndex: 1,
@@ -27,7 +28,8 @@ export const Plans = () => {
             }
         })
 
-        gsap.to('.titlePlans', {
+        gsap.fromTo('.titlePlans',{opacity:0} ,{
+            opacity:1,
             y: 0,
             duration: 2,
             zIndex: 1,

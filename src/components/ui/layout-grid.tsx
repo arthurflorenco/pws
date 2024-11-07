@@ -1,6 +1,6 @@
 "use client";
 import React, { useState, useEffect } from "react";
-import {motion } from "framer-motion";
+import { motion } from "framer-motion";
 import { cn } from "@/lib/utils";
 import Image, { StaticImageData } from "next/image";
 import gsap from "gsap";
@@ -31,11 +31,19 @@ export const LayoutGrid = ({ cards }: { cards: Card[] }) => {
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
 
-    gsap.to('.card-prof',{
+    gsap.fromTo('.card-prof', { x: 999 }, {
       x: 0,
-      
-    }) 
-    
+      duration: 0.7,
+      ease: 'power1.inOut',
+      stagger: 0.2,
+      scrollTrigger: {
+        trigger: '.card-prof',
+        start: 'top 99%',
+        end: 'bottom 99%',
+        scrub: true,
+      }
+    })
+
 
   }, [])
 
@@ -47,7 +55,7 @@ export const LayoutGrid = ({ cards }: { cards: Card[] }) => {
             onClick={() => handleClick(card)}
             className={cn(
               card.className,
-              "relative overflow-hidden",
+              "relative card-prof overflow-hidden",
               selected?.id === card.id
                 ? "rounded-lg cursor-pointer absolute inset-0 h-1/2 w-full md:w-1/2 m-auto z-50 flex justify-center items-center flex-wrap flex-col"
                 : lastSelected?.id === card.id

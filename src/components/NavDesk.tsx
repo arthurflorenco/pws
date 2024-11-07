@@ -12,7 +12,7 @@ export const NavDesk = () => {
   useEffect(() => {
     gsap.to('.navbar', {
       y: 0,
-      duration: 0.8,
+      duration: 2,
     })
 
     return () => {

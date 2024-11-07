@@ -11,7 +11,8 @@ export const Promotion = () => {
     useEffect(() => {
         gsap.registerPlugin(ScrollTrigger)
 
-        gsap.to('.boxer', {
+        gsap.fromTo('.boxer',{opacity: 0}, {
+            opacity: 1,
             x: 0,
             scrollTrigger: {
                 trigger: '.promotion',
@@ -21,7 +22,8 @@ export const Promotion = () => {
             }
         })
 
-        gsap.to('.textPromotion', {
+        gsap.fromTo('.textPromotion',{opacity:0}, {
+            opacity: 1,
             x: 0,
             duration: 4,
             scrollTrigger: {
@@ -32,7 +34,8 @@ export const Promotion = () => {
             }
         })
 
-        gsap.to('.titlePromotion', {
+        gsap.fromTo('.titlePromotion',{opacity: 0}, {
+            opacity: 1,
             x: 0,
             duration: 2,
             scrollTrigger: {
@@ -44,7 +47,9 @@ export const Promotion = () => {
         })
 
         return () => {
-            gsap.killTweensOf('title', 'text')
+            gsap.killTweensOf('title')
+            gsap.killTweensOf('titlePromotion')
+            gsap.killTweensOf('textPromotion')
         }
     }, [])
 

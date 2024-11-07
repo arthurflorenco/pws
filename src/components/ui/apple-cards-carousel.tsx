@@ -89,6 +89,26 @@ export const Carousel = ({ items, initialScroll = 0 }: CarouselProps) => {
     return window && window.innerWidth < 768;
   };
 
+  useEffect(() => {
+    gsap.registerPlugin(ScrollTrigger)
+
+    gsap.fromTo('.card-plans', { opacity: 0, x: 999 }, {
+      opacity: 1,
+      x: 0,
+      duration: 0.5,
+      ease: 'power1.inOut',
+      stagger: 0.2,
+      scrollTrigger: {
+        trigger: '.card-plans',
+        start: 'top 80%',
+        end: 'bottom 80%',
+        scrub: true,
+      }
+    })
+
+    gsap.killTweensOf('card.plans')
+  }, [])
+
   return (
     <CarouselContext.Provider
       value={{ onCardClose: handleCardClose }}
@@ -128,7 +148,7 @@ export const Carousel = ({ items, initialScroll = 0 }: CarouselProps) => {
                   },
                 }}
                 key={"card" + index}
-                className="last:pr-[5%] md:last:pr-[33%] rounded-3xl"
+                className="last:pr-[5%] md:last:pr-[33%] rounded-3xl card-plans"
               >
                 {item}
               </motion.div>
@@ -197,22 +217,6 @@ export const Card = ({
     setOpen(true);
   };
 
-  useEffect(() => {
-    gsap.registerPlugin(ScrollTrigger)
-
-
-    gsap.from('.items', {
-      textContent: `${card.price}`,
-      duration: 2,
-      ease: 'power1.in',
-      snap: { textContent: 1 },
-      stagger: 1,
-      scrollTrigger: {
-        trigger: '.card-plans',
-        start: 'top 80%',
-      }
-    });
-  }, []);
 
   return (
     <>

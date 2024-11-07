@@ -25,7 +25,8 @@ export function Profs() {
             }
         })
 
-        gsap.to('.titleProf', {
+        gsap.fromTo('.titleProf', { opacity: 0 }, {
+            opacity: 1,
             y: 0,
             scrollTrigger: {
                 trigger: '.prof',
@@ -68,7 +69,7 @@ const SkeletonTwo = () => {
     return (
         (<div>
             <p className="font-bold md:text-4xl text-xl text-white">
-            Giacomo La Rocca
+                Giacomo La Rocca
             </p>
             <p className="font-normal text-base text-white">Hallo, Ich bin Giacomo</p>
             <p className="font-normal text-base my-4 max-w-lg text-neutral-200">

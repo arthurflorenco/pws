@@ -11,7 +11,8 @@ export const FAQ = () => {
     useEffect(() => {
         gsap.registerPlugin(ScrollTrigger)
 
-        gsap.to('.questionFAQ', {
+        gsap.fromTo('.questionFAQ',{opacity:0} ,{
+            opacity:1,
             x: 0,
             scrollTrigger: {
                 trigger: '.questionFAQ',
@@ -21,7 +22,8 @@ export const FAQ = () => {
             }
         })
 
-        gsap.to('.titleFAQ', {
+        gsap.fromTo('.titleFAQ',{opacity:0} ,{
+            opacity:1,
             y: 0,
             scrollTrigger: {
                 trigger: '.faq',

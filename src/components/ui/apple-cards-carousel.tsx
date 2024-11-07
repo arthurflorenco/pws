@@ -98,11 +98,11 @@ export const Carousel = ({ items, initialScroll = 0 }: CarouselProps) => {
       duration: 0.5,
       ease: 'power1.inOut',
       stagger: 0.2,
+      
       scrollTrigger: {
         trigger: '.card-plans',
         start: 'top 80%',
-        end: 'bottom 80%',
-        scrub: true,
+        toggleActions: "play none none reverse",
       }
     })
 

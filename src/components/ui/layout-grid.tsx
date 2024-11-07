@@ -35,10 +35,10 @@ export const LayoutGrid = ({ cards }: { cards: Card[] }) => {
       x: 0,
       duration: 0.7,
       ease: 'power1.inOut',
-      stagger: 0.2,
+      stagger: 0.5,
       scrollTrigger: {
-        trigger: '.card-prof',
-        start: 'top 99%',
+        trigger: '.prof',
+        start: 'top 30%',
         end: 'bottom 99%',
         scrub: true,
       }

@@ -33,14 +33,15 @@ export const LayoutGrid = ({ cards }: { cards: Card[] }) => {
 
     gsap.fromTo('.card-prof', { x: 999 }, {
       x: 0,
-      duration: 0.7,
+      duration: 1,
       ease: 'power1.inOut',
-      stagger: 0.5,
+      stagger: 0.2,
       scrollTrigger: {
         trigger: '.prof',
         start: 'top 30%',
-        end: 'bottom 99%',
-        scrub: true,
+        toggleActions: "play none none reverse",
+        //end: 'bottom 99%',
+        //scrub: true,
       }
     })
 

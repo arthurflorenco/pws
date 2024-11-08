@@ -18,10 +18,10 @@ export default function Home() {
       <NavDesk />
       <NavMobile />
       <Hero />
-      <Promotion />
-      <Plans />
-      <Profs />
       <About />
+      <Plans />
+      <Promotion />
+      <Profs />
       <Testimonials />
       <FAQ />
       <Footer />

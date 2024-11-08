@@ -14,22 +14,24 @@ export const FAQ = () => {
         gsap.fromTo('.questionFAQ',{opacity:0} ,{
             opacity:1,
             x: 0,
+            duration: 1,
             scrollTrigger: {
                 trigger: '.questionFAQ',
                 start: 'top 80%',
-                end: 'bottom 80%',
-                scrub: true,
+               // end: 'bottom 80%',
+               // scrub: true,
             }
         })
 
         gsap.fromTo('.titleFAQ',{opacity:0} ,{
             opacity:1,
             y: 0,
+            duration: 1,
             scrollTrigger: {
                 trigger: '.faq',
                 start: 'top 80%',
-                end: 'bottom 80%',
-                scrub: true,
+                //end: 'bottom 80%',
+                //scrub: true,
             }
         })
 
@@ -46,25 +48,25 @@ export const FAQ = () => {
             <div className='w-full text-yellow-200 xl:p-20 questionFAQ'>
                 <Accordion type="single" collapsible>
                     <AccordionItem value="item-1">
-                        <AccordionTrigger className="text-xl xl:text-4xl">Is it accessible?</AccordionTrigger>
+                        <AccordionTrigger className="text-xl xl:text-4xl">Can I train if I've never boxed before?</AccordionTrigger>
                         <AccordionContent className="text-start text-neutral-300 text-md xl:text-xl">
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum dolorum obcaecati delectus odio blanditiis laudantium, quas saepe magnam reiciendis voluptas sint! Repellendus, eius suscipit dolores consectetur recusandae a asperiores culpa.
                         </AccordionContent>
                     </AccordionItem>
                     <AccordionItem value="item-2">
-                        <AccordionTrigger className="text-xl xl:text-4xl">Is it accessible?</AccordionTrigger>
+                        <AccordionTrigger className="text-xl xl:text-4xl">What are the benefits of boxing?</AccordionTrigger>
                         <AccordionContent className="text-start text-neutral-300 text-md xl:text-xl">
                             Lorem ipsum dolor sit amet consectetur, adipisicing elit. Similique perspiciatis, odio nemo a distinctio rerum? Quaerat nostrum ex ut natus? Consequuntur corporis esse modi consectetur? Quia voluptatibus sint fugiat necessitatibus!
                         </AccordionContent>
                     </AccordionItem>
                     <AccordionItem value="item-3">
-                        <AccordionTrigger className="text-xl xl:text-4xl">Is it accessible?</AccordionTrigger>
+                        <AccordionTrigger className="text-xl xl:text-4xl">Do I need to buy any equipment?</AccordionTrigger>
                         <AccordionContent className="text-start text-neutral-300 text-md xl:text-xl">
                             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illo deserunt reiciendis dolorum eveniet, sint earum deleniti porro blanditiis officiis ipsam nihil voluptas pariatur ipsum dicta repudiandae magni corrupti quis expedita?
                         </AccordionContent>
                     </AccordionItem>
                     <AccordionItem value="item-4">
-                        <AccordionTrigger className="text-xl xl:text-4xl">Is it accessible?</AccordionTrigger>
+                        <AccordionTrigger className="text-xl xl:text-4xl">What should I do if I miss a lesson?</AccordionTrigger>
                         <AccordionContent className="text-start text-neutral-300 text-md xl:text-xl">
                             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illo deserunt reiciendis dolorum eveniet, sint earum deleniti porro blanditiis officiis ipsam nihil voluptas pariatur ipsum dicta repudiandae magni corrupti quis expedita?
                         </AccordionContent>

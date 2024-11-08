@@ -43,6 +43,7 @@ export function Profs() {
             <div className="px-5 flex flex-col justify-center items-start">
                 <span className='text-yellow-100 text-md xl:text-xl font-semibold border-[1px] border-yellow-100 p-3 rounded-xl mb-3 titleProf'>Lehrkräfte</span>
                 <h1 className='text-yellow-300 text-5xl md:text-7xl font-bold titleProf'>Wer sind <br /> unsere Lehrer?</h1>
+                <p className='text-white text-start text-md xl:text-xl mt-4 w-full titleProf'>Click on the photo to find out more.</p>
             </div>
             <div className="h-screen cardProf">
                 <LayoutGrid cards={cards} />

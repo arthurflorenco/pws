@@ -48,7 +48,7 @@ export const FAQ = () => {
             <div className='w-full text-yellow-200 xl:p-20 questionFAQ'>
                 <Accordion type="single" collapsible>
                     <AccordionItem value="item-1">
-                        <AccordionTrigger className="text-xl xl:text-4xl">Can I train if I've never boxed before?</AccordionTrigger>
+                        <AccordionTrigger className="text-xl xl:text-4xl">Can I train if I&apos;ve never boxed before?</AccordionTrigger>
                         <AccordionContent className="text-start text-neutral-300 text-md xl:text-xl">
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum dolorum obcaecati delectus odio blanditiis laudantium, quas saepe magnam reiciendis voluptas sint! Repellendus, eius suscipit dolores consectetur recusandae a asperiores culpa.
                         </AccordionContent>

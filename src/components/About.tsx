@@ -66,7 +66,7 @@ export const About = () => {
                 <span className='text-yellow-100 text-md xl:text-xl font-semibold border-[1px] border-yellow-100 p-3 rounded-xl mb-3 titleTime'>About</span>
                 <h1 className='text-yellow-300 text-5xl md:text-7xl font-bold titleTime'>Transform your life with boxing!</h1>
                 <p className='text-white text-md xl:text-xl mt-4 flex items-center justify-center w-full md:px-4 textTime'>Unser Ziel ist es, ein qualitativ hochwertiges Boxtraining anzubieten, das unseren Schülern hilft, sich zu verbessern, ihre Ziele zu erreichen und selbstbewusster und gesünder zu leben. Wir trainieren dienstags, donnerstags um 18:30 Uhr und Sonntags um 12:00 Uhr in Altstetten.
-                    Bei uns geht’s nicht nur um Technik, sondern auch um Fitness, Spaß und eine coole Gemeinschaft. Jeder kann mitmachen, ganz egal, welches Level du hast.</p>
+                    Bei uns geht&apos;s nicht nur um Technik, sondern auch um Fitness, Spaß und eine coole Gemeinschaft. Jeder kann mitmachen, ganz egal, welches Level du hast.</p>
                 <div className='mt-2 w-full flex justify-center items-center cardTime'>
                     <Card />
                 </div>

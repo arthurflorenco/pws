@@ -4,7 +4,7 @@ import { InfiniteMovingCards } from "./ui/infinite-moving-cards";
 import laura from '../assets/laura.jpeg'
 import simcho from '../assets/simcho.jpeg'
 import marco from '../assets/marco.jpeg'
-import maria from '../assets/maria.jpeg'
+//import maria from '../assets/maria.jpeg'
 import chiara from '../assets/chiara.jpeg'
 
 

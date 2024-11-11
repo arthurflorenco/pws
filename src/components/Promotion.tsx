@@ -1,6 +1,6 @@
 'use client'
 import Image from 'next/image'
-import promotionImg from '../assets/promotion.jpg'
+import promotionImg from '../assets/promotion.webp'
 import { useEffect } from 'react'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'

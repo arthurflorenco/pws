@@ -1,10 +1,10 @@
 "use client";
 import React, { useEffect } from "react";
 import { LayoutGrid } from "./ui/layout-grid";
-import Giacomo from '../assets/giacomo.jpg'
-import Manu from '../assets/imgCard4.jpg'
-import toGiacomo from '../assets/toGiacomo.jpg'
-import toManu from '../assets/toManu.jpg'
+import Giacomo from '../assets/giacomo.webp'
+import Manu from '../assets/imgCard4.webp'
+import toGiacomo from '../assets/toGiacomo.webp'
+import toManu from '../assets/toManu.webp'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import '../styles/animations.css'

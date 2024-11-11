@@ -2,10 +2,10 @@
 import Image from "next/image";
 import React, { useEffect } from "react";
 import { Carousel, Card } from "@/components/ui/apple-cards-carousel";
-import imgCard3 from "../assets/imgCard1.jpg"
-import imgCard2 from "../assets/imgCard2.jpg"
-import imgCard1 from "../assets/imgCard3.jpg"
-import imgCard4 from "../assets/imgCard4.jpg"
+import imgCard3 from "../assets/imgCard1.webp"
+import imgCard2 from "../assets/imgCard2.webp"
+import imgCard1 from "../assets/imgCard3.webp"
+import imgCard4 from "../assets/imgCard4.webp"
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import '../styles/animations.css'

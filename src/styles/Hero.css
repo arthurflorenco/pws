@@ -1,5 +1,5 @@
 .hero {
-    background-image: url(../assets/background.jpg);
+    background-image: url(../assets/background.webp);
     background-size: cover;
     background-position: center;
     height: 100vh;
@@ -8,7 +8,7 @@
 
 @media only screen and (max-width: 767px) {
     .hero {
-        background-image: url(../assets/background2.jpg);
+        background-image: url(../assets/background2.webp);
         /* Imagem para dispositivos móveis */
     }
 }

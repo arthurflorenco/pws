@@ -48,7 +48,7 @@ const Card: React.FC = () => {
     return (
         <div className="flex flex-col justify-between  w-full bg-gradient-to-b from-yellow-50 to-yellow-300 bg-opacity-70 backdrop-blur-md rounded-3xl md:m-4">
             <div className="flex flex-col p-4">
-                <span className="font-bold text-neutral-500 text-3xl">Next Class</span>
+                <span className="font-bold text-neutral-500 text-3xl">Nächste Stunde</span>
                 <span className="font-bold text-lg text-neutral-400">{day}</span>
             </div>
             <div className="flex justify-between items-end p-4">

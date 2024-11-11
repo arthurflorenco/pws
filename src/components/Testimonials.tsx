@@ -4,6 +4,8 @@ import { InfiniteMovingCards } from "./ui/infinite-moving-cards";
 import laura from '../assets/laura.jpeg'
 import simcho from '../assets/simcho.jpeg'
 import marco from '../assets/marco.jpeg'
+import maria from '../assets/maria.jpeg'
+import chiara from '../assets/chiara.jpeg'
 
 
 export function Testimonials() {
@@ -38,16 +40,16 @@ const testimonials = [
     },
     {
         quote:
-            "It is a truth universally acknowledged, that a single man in possession of a good fortune, must be in want of a wife.",
-        name: "Jane Austen",
-        title: "Pride and Prejudice",
-        img: laura
+            "Ich habe vor kurzem mit dem Boxen begonnen und bin absolut begeistert! Die Trainer sind sehr kompetent und helfen dabei, die richtige Technik zu erlernen. Das Training ist intensiv, aber macht unglaublich viel Spaß. Ich fühle mich fitter und stärker, und die Atmosphäre ist motivierend.",
+        name: "Chiara",
+        title: "Tolle Atmosphäre",
+        img: chiara
     },
-    {
+    /*{
         quote:
-            "Call me Ishmael. Some years ago—never mind how long precisely—having little or no money in my purse, and nothing particular to interest me on shore, I thought I would sail about a little and see the watery part of the world.",
-        name: "Herman Melville",
-        title: "Moby-Dick",
-        img: laura
-    },
+            "Ich habe schon viele Sportarten gemacht, doch Boxen hat ein inneres Feuer in mir erweckt. Ich habe mehrere Clubs geschnuppert aber beim prayworksleep gefiel es mir am besten. Das Training ist nicht nur mit Kondition aufgebaut, sondern auch mit viel Technik. In diesen Club habe ich nice Freunde gefunden, wir gehen nicht nur respektvoll miteinander um, wir motivieren auch einander. Es ist ein freundliches und spassiger Umfeld. Es ist mehr als eine Sportart oder ein Club. Denn es fühlt sich fast familiär an, die Trainer geben uns vom Herzen ihre Kenntnisse weiter, so dass wir alle zusammen uns weiterentwickeln können.",
+        name: "Maria",
+        title: "Try something new",
+        img: maria
+    },*/
 ];

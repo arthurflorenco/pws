@@ -17,14 +17,14 @@ export const NavMobile = () => {
     }
 
     useEffect(() => {
-        gsap.to('.navbar',{
+        gsap.to('.navbar', {
             duration: 2,
             y: 0
         })
 
         return () => {
             gsap.killTweensOf('.navbar')
-          }        
+        }
     }, [])
 
     return (
@@ -36,17 +36,18 @@ export const NavMobile = () => {
                 >
                     <Image src={menu} alt='menu' width={20} />
                 </div>
-                <div><Image src={logo} alt='Logo' width={40} height={40} /></div>
+                <div>
+                    <Link href='/'><Image src={logo} alt='Logo' width={40} height={40} /></Link></div>
                 <button>
-                    <Link href='/login'><Image width={30} height={30} src={icon} alt="contact-card" /></Link>
+                    <Link href='#footer'><Image width={30} height={30} src={icon} alt="contact-card" /></Link>
                 </button>
             </div>
             <div className={`xl:hidden ${isOpen ? 'block' : 'hidden'} text-yellow-300   z-10 p-2 h-screen text-center text-5xl flex justify-center items-center`}>
                 <ul className="flex flex-col space-y-28 mt-3 justify-center items-center">
                     <li><Link className='mx-4' href='/'>Startseite</Link></li>
-                    <li><Link className='mx-4' href='/'>Über</Link></li>
-                    <li><Link className='mx-4' href='/'>Zweifeln</Link></li>
-                    <li><Link className='mx-4' href='/'>Preise</Link></li>
+                    <li><Link className='mx-4' href='#about'>Über Uns</Link></li>
+                    <li><Link className='mx-4' href='#plans'>Preise</Link></li>
+                    <li><Link href='#faq' className='hover:text-white'>Fragen?</Link></li>
                 </ul>
             </div>
         </nav>

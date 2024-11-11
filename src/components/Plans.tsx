@@ -51,10 +51,10 @@ export const Plans = () => {
     ));
 
     return (
-        <div className="w-full h-full py-20 plans">
+        <div className="w-full h-full py-20 plans" id="plans">
             <div className="flex flex-col items-center justify-center text-center title-text">
                 <span className='text-yellow-100 text-md xl:text-xl font-semibold border-[1px] border-yellow-100 p-3 rounded-xl mb-3 titlePlans'>Unsere Pläne</span>
-                <h1 className='text-yellow-300 text-5xl md:text-7xl font-bold titlePlans z-30'>1 Monat Gratis Für Neus</h1>
+                <h1 className='text-yellow-300 text-5xl md:text-7xl font-bold titlePlans z-30'>1 Monat Gratis Für Neue Mitglieder</h1>
                 <p className='text-white text-md xl:text-xl mt-4 textPlans'>
                     Wenn du von einem Mitglied weiterempfohlen wirst und dich anmeldest, bekommst du den ersten Monat gratis. So kannst du den Club in Ruhe ausprobieren und leicht ins Training starten!
                 </p>

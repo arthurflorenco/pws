@@ -2,7 +2,7 @@
 import React, { useEffect } from "react";
 import { LayoutGrid } from "./ui/layout-grid";
 import Giacomo from '../assets/giacomo.webp'
-import Manu from '../assets/imgCard4.webp'
+import Manu from '../assets/manu.jpeg'
 import toGiacomo from '../assets/toGiacomo.webp'
 import toManu from '../assets/toManu.webp'
 import gsap from 'gsap'

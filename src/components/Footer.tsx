@@ -7,7 +7,7 @@ import youtube from '../assets/youtube.svg'
 
 export const Footer = () => {
     return (
-        <div className='flex flex-col justify-center items-center bg-neutral-900 w-full pb-14 mt-20'>
+        <div className='flex flex-col justify-center items-center bg-neutral-900 w-full pb-14 mt-20' id='footer'>
             <div className="w-56">
                 <Image src={logo} alt='logo' />
             </div>
@@ -18,9 +18,7 @@ export const Footer = () => {
                 </div>
                 <div className='max-w-40 min-h-48 justify-start items-center flex flex-col grow-[1] basis-[200]'>
                     <h2 className='text-white text-lg font-bold mb-4'>CONTACT:</h2>
-                    <p className='text-white text-sm mb-4'>+33 1 23
-                    45 67 89</p>
-                    <p className='text-white text-sm mb-4'>contact@site.com</p>
+                    <p className='text-white text-sm mb-4'>TEL: 076 816 76 44</p>
                 </div>
                 <div className='max-w-40 min-h-48 justify-start items-center flex flex-col grow-[1] basis-[200]'>
                 <h2 className='text-white text-lg font-bold mb-4'>FOLGE UNS:</h2>

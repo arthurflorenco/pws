@@ -11,20 +11,20 @@ export const FAQ = () => {
     useEffect(() => {
         gsap.registerPlugin(ScrollTrigger)
 
-        gsap.fromTo('.questionFAQ',{opacity:0} ,{
-            opacity:1,
+        gsap.fromTo('.questionFAQ', { opacity: 0 }, {
+            opacity: 1,
             x: 0,
             duration: 1,
             scrollTrigger: {
                 trigger: '.questionFAQ',
                 start: 'top 80%',
-               // end: 'bottom 80%',
-               // scrub: true,
+                // end: 'bottom 80%',
+                // scrub: true,
             }
         })
 
-        gsap.fromTo('.titleFAQ',{opacity:0} ,{
-            opacity:1,
+        gsap.fromTo('.titleFAQ', { opacity: 0 }, {
+            opacity: 1,
             y: 0,
             duration: 1,
             scrollTrigger: {
@@ -42,33 +42,39 @@ export const FAQ = () => {
     }, [])
 
     return (
-        <div className='flex justify-center items-center flex-col w-full px-4 mt-20 text-center faq'>
+        <div className='flex justify-center items-center flex-col w-full px-4 mt-20 text-center faq' id="faq">
             <span className='text-yellow-100 text-md xl:text-xl font-semibold border-[1px] border-yellow-100 p-3 rounded-xl mb-3 titleFAQ'>FAQ</span>
-            <h1 className='text-yellow-300 text-5xl md:text-7xl font-bold titleFAQ'>Häufig gestellte Fragen</h1>
+            <h1 className='text-yellow-300 text-5xl md:text-7xl font-bold titleFAQ'>Hier sind die Antworten aus der Sicht deines Boxclubs:
+            </h1>
             <div className='w-full text-yellow-200 xl:p-20 questionFAQ'>
                 <Accordion type="single" collapsible>
                     <AccordionItem value="item-1">
-                        <AccordionTrigger className="text-xl xl:text-4xl">Can I train if I&apos;ve never boxed before?</AccordionTrigger>
+                        <AccordionTrigger className="text-xl xl:text-4xl">Kann ich trainieren, wenn ich noch nie geboxt habe?
+                        </AccordionTrigger>
                         <AccordionContent className="text-start text-neutral-300 text-md xl:text-xl">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum dolorum obcaecati delectus odio blanditiis laudantium, quas saepe magnam reiciendis voluptas sint! Repellendus, eius suscipit dolores consectetur recusandae a asperiores culpa.
+                            Natürlich! Bei uns sind Anfänger herzlich willkommen, und viele unserer Mitglieder haben ohne Vorkenntnisse begonnen. Unser Trainerteam wird dir die Grundlagen Schritt für Schritt beibringen, damit du dich sicher und wohl fühlst. In unseren Anfängerkursen lernst du alles, was du brauchst - ganz gleich, ob du deine Fitness verbessern, Stress abbauen oder die Techniken des Boxens erlernen möchtest.
+
                         </AccordionContent>
                     </AccordionItem>
                     <AccordionItem value="item-2">
-                        <AccordionTrigger className="text-xl xl:text-4xl">What are the benefits of boxing?</AccordionTrigger>
+                        <AccordionTrigger className="text-xl xl:text-4xl">Was sind die Vorteile des Boxens?
+                        </AccordionTrigger>
                         <AccordionContent className="text-start text-neutral-300 text-md xl:text-xl">
-                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Similique perspiciatis, odio nemo a distinctio rerum? Quaerat nostrum ex ut natus? Consequuntur corporis esse modi consectetur? Quia voluptatibus sint fugiat necessitatibus!
+                            Boxen ist ein effektives Ganzkörpertraining, das dir sowohl körperlich als auch mental sehr viel bringt. Es verbessert deine Ausdauer und Kraft, schärft deine Koordination und Reflexe und steigert dein Selbstbewusstsein. Viele unserer Mitglieder schätzen das intensive Training und den Stressabbau, den es bietet. Außerdem bist du Teil einer motivierenden Gemeinschaft, die sich gegenseitig unterstützt und antreibt.
                         </AccordionContent>
                     </AccordionItem>
                     <AccordionItem value="item-3">
-                        <AccordionTrigger className="text-xl xl:text-4xl">Do I need to buy any equipment?</AccordionTrigger>
+                        <AccordionTrigger className="text-xl xl:text-4xl">Muss ich irgendwelche Ausrüstung kaufen?
+                        </AccordionTrigger>
                         <AccordionContent className="text-start text-neutral-300 text-md xl:text-xl">
-                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illo deserunt reiciendis dolorum eveniet, sint earum deleniti porro blanditiis officiis ipsam nihil voluptas pariatur ipsum dicta repudiandae magni corrupti quis expedita?
+                            Für den Einstieg brauchst du keine eigene Ausrüstung. Wir stellen dir die grundlegenden Sachen wie Boxhandschuhe und Bandagen zur Verfügung. Wenn du regelmäßig trainierst, kann es sinnvoll sein, dir eigene Handschuhe und Bandagen zuzulegen. Unsere Trainer beraten dich gern dabei, die richtige Ausrüstung für dich auszuwählen. Für fortgeschrittenes Training empfehlen wir auch einen Mundschutz.
                         </AccordionContent>
                     </AccordionItem>
                     <AccordionItem value="item-4">
-                        <AccordionTrigger className="text-xl xl:text-4xl">What should I do if I miss a lesson?</AccordionTrigger>
+                        <AccordionTrigger className="text-xl xl:text-4xl">Was sollte ich tun, wenn ich eine Stunde verpasse?
+                        </AccordionTrigger>
                         <AccordionContent className="text-start text-neutral-300 text-md xl:text-xl">
-                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illo deserunt reiciendis dolorum eveniet, sint earum deleniti porro blanditiis officiis ipsam nihil voluptas pariatur ipsum dicta repudiandae magni corrupti quis expedita?
+                            Falls du eine Trainingseinheit verpasst, mach dir keine Sorgen. Sprich einfach mit uns, und wir helfen dir, den verpassten Inhalt nachzuholen. Wir bieten mehrere Trainingstermine in der Woche an, sodass du flexibel eine andere Stunde nutzen kannst. Unser Ziel ist es, dich dabei zu unterstützen, beständig Fortschritte zu machen und deine Trainingsziele zu erreichen.
                         </AccordionContent>
                     </AccordionItem>
                 </Accordion>

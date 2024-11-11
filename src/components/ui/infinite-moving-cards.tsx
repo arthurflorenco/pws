@@ -1,8 +1,6 @@
 "use client";
-
 import { cn } from "@/lib/utils";
 import React, { useEffect, useState, useCallback } from "react";
-import { Avatar, AvatarFallback, AvatarImage } from "./avatar";
 import Image, { StaticImageData } from "next/image";
 
 type Items = {

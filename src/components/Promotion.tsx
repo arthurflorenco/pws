@@ -1,6 +1,6 @@
 'use client'
 import Image from 'next/image'
-import promotionImg from '../assets/promotion.webp'
+import promotionImg from '../assets/promotion.jpeg'
 import { useEffect } from 'react'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
@@ -67,6 +67,8 @@ export const Promotion = () => {
                 <Image src={promotionImg}
                     alt="Boxer"
                     className="w-full boxer rounded-3xl h-full object-cover object-center"
+                    width={500}
+                    height={500}
                 />
             </div>
         </div>

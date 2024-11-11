@@ -3,6 +3,14 @@
 import { cn } from "@/lib/utils";
 import React, { useEffect, useState, useCallback } from "react";
 import { Avatar, AvatarFallback, AvatarImage } from "./avatar";
+import Image, { StaticImageData } from "next/image";
+
+type Items = {
+    quote: string;
+    name: string;
+    title: string;
+    img: StaticImageData;
+}
 
 export const InfiniteMovingCards = ({
     items,
@@ -11,12 +19,7 @@ export const InfiniteMovingCards = ({
     pauseOnHover = true,
     className,
 }: {
-    items: {
-        quote: string;
-        name: string;
-        title: string;
-        img: string;
-    }[];
+    items: Items[];
     direction?: "left" | "right";
     speed?: "fast" | "normal" | "slow";
     pauseOnHover?: boolean;
@@ -74,10 +77,10 @@ export const InfiniteMovingCards = ({
             >
                 {items.map((item) => (
                     <li
-                        className="w-[350px] max-w-full relative rounded-2xl border border-b-0 flex-shrink-0 border-slate-700 px-8 py-6 md:w-[450px] bg-yellow-300"                       
+                        className="w-[350px] max-w-full relative rounded-2xl border border-b-0 flex-shrink-0 border-slate-700 px-8 py-6 md:w-[450px] bg-yellow-300"
                         key={item.name}
                     >
-                        <blockquote>
+                        <blockquote className="h-full flex flex-col items-start justify-between">
                             <div
                                 aria-hidden="true"
                                 className="user-select-none -z-1 pointer-events-none absolute -left-0.5 -top-0.5 h-[calc(100%_+_4px)] w-[calc(100%_+_4px)]"
@@ -85,11 +88,10 @@ export const InfiniteMovingCards = ({
                             <span className="relative z-20 text-sm leading-[1.6] text-black font-normal">
                                 {item.quote}
                             </span>
-                            <div className="relative z-20 mt-6 flex flex-row items-center">
-                                <Avatar className="mr-2">
-                                    <AvatarImage src={item.img} />
-                                    <AvatarFallback>PWS</AvatarFallback>
-                                </Avatar>
+                            <div className="relative z-20 mt-6 flex flex-row items-center content-end">
+                                <div className="w-10 h-10 m-2">
+                                    <Image className="h-full w-full rounded-full object-cover" src={item.img.src} alt="imagem" width={30} height={30} quality={75} />
+                                </div>
                                 <span className="flex flex-col gap-1">
                                     <span className="text-sm leading-[1.6] text-gray-400 font-normal">
                                         {item.name}

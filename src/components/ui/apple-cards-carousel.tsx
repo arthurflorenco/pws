@@ -296,6 +296,7 @@ export const Card = ({
           src={card.src}
           alt={card.title}
           fill
+          sizes="20rem"
           className="object-cover absolute z-10 inset-0"
         />
       </motion.button>

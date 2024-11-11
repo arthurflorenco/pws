@@ -87,6 +87,7 @@ const DummyContent = () => {
                             alt="Macbook mockup from Aceternity UI"
                             height="500"
                             width="500"
+                            priority
                             className="md:w-1/2 md:h-1/2 h-full w-full mx-auto object-contain"
                         />
                     </div>

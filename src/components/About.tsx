@@ -72,7 +72,7 @@ export const About = () => {
                 </div>
             </div>
             <div className="w-full xl:w-[50%] h[80%] p-4 md:p-14 xl:p-36 mt-4 md:mt-0 flex justify-center items-center">
-                <Image className='rounded-3xl woman' width={600} src={woman} alt='logo' />
+                <Image className='rounded-3xl woman' width={600} loading="lazy" src={woman} alt='logo' />
             </div>
         </div>
     )

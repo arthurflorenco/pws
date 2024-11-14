@@ -4,7 +4,6 @@ import { About } from "@/components/About";
 import { FAQ } from "@/components/FAQ";
 import { Footer } from "@/components/Footer";
 import { Hero } from "@/components/Hero";
-import { NavDesk } from "@/components/NavDesk";
 import { NavMobile } from "@/components/NavMobile";
 import { Plans } from "@/components/Plans";
 import { Profs } from "@/components/Profs";

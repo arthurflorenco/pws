@@ -15,19 +15,30 @@ export const Hero = () => {
     useEffect(() => {
         gsap.registerPlugin(ScrollTrigger);
 
-        gsap.fromTo('.logo-container', { y: 999, opacity: 0 }, {
-            y: 0,
-            opacity: 1,
-            duration: 2,
-            ease: 'power1.inOut',
-        })
-
         // ScrollTrigger para controlar a rotação com o scroll
-        gsap.to('.logo-rotate', {
-            rotation: 360,
+        gsap.fromTo('.logo-rotate',{y:999,}, {
+            y: 0,
+            duration: 2,
+        });
+
+        gsap.to('.logo-rotate',{
+            rotate: 360,
             repeat: -1,
             duration: 30,
-        });
+        })
+
+        gsap.to('.logo-container',{
+            rotate: 360,
+            repeat: 1,
+            duration: 30,
+            ease: 'power1.inOut',
+            scrollTrigger: {
+                trigger: '.logo-container',
+                start: 'top 10%',
+                end: 'bottom top',
+                scrub: true,
+            }
+        })
 
         gsap.to(['.btn1', '.btn2'], {
             x: 0,
@@ -42,7 +53,7 @@ export const Hero = () => {
 
     return (
         <div className='hero min-h-screen w-svw flex flex-col items-center justify-center mb-14 xl:mb-0'>
-            <div className='logo-container'>
+            <div className='logo-container overflow-hidden'>
                 <Image className='logo-rotate' src={logo} alt='logo' width={600} loading="lazy" />
             </div>
             <div className='md:space-x-5 flex flex-col md:flex-row'>

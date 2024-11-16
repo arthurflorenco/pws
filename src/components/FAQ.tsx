@@ -20,6 +20,7 @@ export const FAQ = () => {
                 start: 'top 80%',
                 // end: 'bottom 80%',
                 // scrub: true,
+                toggleActions: "play none none reverse",
             }
         })
 

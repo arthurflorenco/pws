@@ -14,7 +14,8 @@ export const Promotion = () => {
 
         gsap.fromTo('.boxer', { opacity: 0 }, {
             opacity: 1,
-            x: 0,
+            y: 0,
+            duration: 2,
             scrollTrigger: {
                 trigger: '.promotion',
                 start: 'top 80%',

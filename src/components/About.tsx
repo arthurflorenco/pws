@@ -64,7 +64,7 @@ export const About = () => {
                     opacity: 1,
                     y: 0,
                     stagger: 0.01,
-                    duration: 1,
+                    duration: 0.8,
                     scrollTrigger: {
                         trigger: '.titleTime',
                         start: 'top 80%',

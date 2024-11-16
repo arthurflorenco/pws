@@ -6,15 +6,6 @@
 
 /* Promotion.tsx */
 
-.titlePromotion {
-    transform: translateX(-999px);
-}
-
-.textPromotion {
-    transform: translateX(-999px);
-}
-
-
 .boxer {
     transform: translateX(999px);
 }
@@ -35,10 +26,6 @@
 
 .titleTime {
     transform: translatex(-999px);
-}
-
-.textTime {
-    transform: translateY(400px);
 }
 
 .woman {

@@ -1,11 +1,11 @@
 import React, { useLayoutEffect, useRef, forwardRef } from 'react';
 import gsap from 'gsap';
 
-export const Transition = forwardRef((props, ref) => {
+export const Transition = forwardRef(() => {
     const comp = useRef(null);
 
     useLayoutEffect(() => {
-        let ctx = gsap.context(() => {
+        const ctx = gsap.context(() => {
             const t1 = gsap.timeline();
             t1.to("#transition-bg", {
                 opacity: 0,

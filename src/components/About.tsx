@@ -11,7 +11,6 @@ import '../styles/animations.css'
 
 export const About = () => {
     const titleRef = useRef<HTMLParagraphElement>(null);
-    const textRef = useRef<HTMLParagraphElement>(null);
 
     useEffect(() => {
         gsap.registerPlugin(ScrollTrigger)

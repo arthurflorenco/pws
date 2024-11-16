@@ -69,7 +69,6 @@ export const Promotion = () => {
                     className="w-full boxer rounded-3xl h-full object-cover object-center"
                     width={500}
                     height={500}
-                    loading='lazy'
                     priority
                 />
             </div>

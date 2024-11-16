@@ -39,7 +39,7 @@ export const NavMobile = () => {
     }, [isOpen])
 
     return (
-        <nav className={`z-50 px-6 py-3 top-0 fixed text-yellow-300 navbar w-svw ${isOpen ? 'bg-opacity-70 backdrop-blur-md' : 'bg-transparent'} `}>
+        <nav className={`z-50 px-6 py-3 top-0 fixed text-yellow-300 navbar w-svw ${isOpen ? 'bg-opacity-70 backdrop-blur-md bg-neutral-900' : 'bg-transparent'} `}>
             <div className="container flex justify-between items-center w-full">
                 <div className=''>
                     <Link href='/'><Image src={logo} alt='Logo' loading="lazy" width={40} height={40} /></Link>

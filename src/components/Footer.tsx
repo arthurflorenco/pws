@@ -7,9 +7,9 @@ import youtube from '../assets/youtube.svg'
 
 export const Footer = () => {
     return (
-        <div className='flex flex-col justify-center items-center bg-neutral-900 w-full pb-14 mt-20' id='footer'>
+        <div className='space-grotesk  flex flex-col justify-center items-center bg-neutral-900 w-full pb-14 mt-20' id='footer'>
             <div className="w-56">
-                <Image src={logo} alt='logo' />
+                <Image src={logo} loading="lazy" alt='logo' />
             </div>
             <div className='flex flex-wrap gap-4 xl:w-[60%] items-center justify-around p-4'>
                 <div className='max-w-40 min-h-48 justify-start  flex flex-col grow-[1] basis-[200]'>
@@ -23,8 +23,8 @@ export const Footer = () => {
                 <div className='max-w-40 min-h-48 justify-start items-center flex flex-col grow-[1] basis-[200]'>
                 <h2 className='text-white text-lg font-bold mb-4'>FOLGE UNS:</h2>
                 <div className='flex justify-center gap-4'>
-                <Link href='https://www.instagram.com/prayworksleep/'><Image src={insta} alt='insta' width={40} /></Link>
-                <Link href='https://www.youtube.com/@jungeausfavela'><Image src={youtube} alt='youtube' width={40} /></Link>
+                <Link href='https://www.instagram.com/prayworksleep/'><Image src={insta} loading="lazy" alt='insta' width={40} /></Link>
+                <Link href='https://www.youtube.com/@jungeausfavela'><Image src={youtube} loading="lazy" alt='youtube' width={40} /></Link>
                 </div>
                 </div>
             </div>

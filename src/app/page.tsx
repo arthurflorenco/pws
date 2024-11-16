@@ -4,12 +4,12 @@ import { About } from "@/components/About";
 import { FAQ } from "@/components/FAQ";
 import { Footer } from "@/components/Footer";
 import { Hero } from "@/components/Hero";
-import { NavMobile } from "@/components/NavMobile";
 import { Plans } from "@/components/Plans";
 import { Profs } from "@/components/Profs";
 import { Promotion } from "@/components/Promotion";
 import { Testimonials } from "@/components/Testimonials";
 import { Transition } from '@/components/ui/Transition';
+import { NavMobile } from '@/components/NavMobile';
 
 
 export default function Home() {

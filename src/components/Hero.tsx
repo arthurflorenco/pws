@@ -6,53 +6,28 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useEffect } from 'react';
 
-
-
-
-
 export const Hero = () => {
-
     useEffect(() => {
         gsap.registerPlugin(ScrollTrigger);
-
-        // ScrollTrigger para controlar a rotação com o scroll
-        gsap.fromTo('.logo-rotate',{y:999,}, {
-            y: 0,
-            duration: 2,
+        gsap.fromTo('.logo-rotate', { scale: 0.5 }, {
+            scale: 1,
+            duration: 1.5,
+            ease: 'power1.in',
         });
-
-        gsap.to('.logo-rotate',{
+        gsap.to('.logo-rotate', {
             rotate: 360,
+            duration: 100,
             repeat: -1,
-            duration: 30,
+            ease: 'none'
         })
-
-        gsap.to('.logo-container',{
-            rotate: 360,
-            repeat: 1,
-            duration: 30,
-            ease: 'power1.inOut',
-            scrollTrigger: {
-                trigger: '.logo-container',
-                start: 'top 10%',
-                end: 'bottom top',
-                scrub: true,
-            }
-        })
-
         gsap.to(['.btn1', '.btn2'], {
             x: 0,
-            duration: 3
+            duration: 1.5
         })
-
-        // Retornar uma função de limpeza
-        return () => {
-
-        };
     }, []);
 
     return (
-        <div className='hero min-h-screen w-svw flex flex-col items-center justify-center mb-14 xl:mb-0'>
+        <div className='hero min-h-screen w-svw flex flex-col items-center justify-center'>
             <div className='logo-container overflow-hidden'>
                 <Image className='logo-rotate' src={logo} alt='logo' width={600} loading="lazy" />
             </div>

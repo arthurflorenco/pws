@@ -46,29 +46,28 @@ export const Transition = forwardRef((props, ref) => {
 
     return (
         <div className="relative" ref={comp}>
-            {/* Tela de transição branca */}
             <div
                 id="transition-bg"
                 className="h-screen w-full bg-neutral-900 absolute top-0 left-0 z-20"
             ></div>
             <div
                 id="intro-slider"
-                className="h-screen p-3 md:p-10 bg-neutral-900 absolute top-0 left-0 space-grotesk z-10 w-full flex flex-col gap-10 tracking-tight text-yellow-400"
+                className="h-screen p-3 md:p-10 bg-neutral-900 absolute top-0 left-0 z-10 w-full flex flex-col gap-10 tracking-tight text-yellow-400"
             >
-                <h1 className="text-9xl" id="title-1">
+                <h1 className="text-9xl md:text-[30vw] xl:text-[17vw]" id="title-1">
                     Pray
                 </h1>
-                <h1 className="text-9xl" id="title-2">
+                <h1 className="text-9xl md:text-[30vw] xl:text-[17vw]" id="title-2">
                     Work
                 </h1>
-                <h1 className="text-9xl" id="title-3">
+                <h1 className="text-9xl md:text-[30vw] xl:text-[17vw]" id="title-3">
                     Sleep
                 </h1>
             </div>
             <div className="h-screen flex bg-neutral-900 justify-center place-items-center">
                 <h1
                     id="welcome"
-                    className="text-7xl md:text-9xl font-bold text-yellow-400 space-grotesk"
+                    className="text-7xl md:text-9xl font-bold text-yellow-400"
                 >
                     Welcome.
                 </h1>

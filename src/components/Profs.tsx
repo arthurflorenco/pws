@@ -1,9 +1,9 @@
 "use client";
 import React, { useEffect } from "react";
 import { LayoutGrid } from "./ui/layout-grid";
-import Giacomo from '../assets/giacomo.webp'
+import Giacomo from '../assets/giacomo.jpeg'
 import Manu from '../assets/manu.jpeg'
-import toGiacomo from '../assets/toGiacomo.webp'
+import toGiacomo from '../assets/toGiacomo.jpeg'
 import toManu from '../assets/toManu.webp'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
@@ -41,9 +41,9 @@ export function Profs() {
     return (
         (<div className="w-full flex flex-col justify-center prof">
             <div className="px-5 flex flex-col justify-center items-start">
-                <span className='text-yellow-100 text-md xl:text-xl font-semibold border-[1px] border-yellow-100 p-3 rounded-xl mb-3 titleProf'>Lehrkräfte</span>
-                <h1 className='text-yellow-300 text-5xl md:text-7xl font-bold titleProf'>Wer sind <br /> unsere Lehrer?</h1>
-                <p className='text-white text-start text-md xl:text-xl mt-4 w-full titleProf'>Click on the photo to find out more.</p>
+                <span className='text-yellow-100 text-md xl:text-xl font-semibold border-[1px] border-yellow-100 p-3 rounded-xl mb-3 titleProf'>Trainer</span>
+                <h1 className='text-yellow-300 text-5xl md:text-7xl font-bold titleProf'>Wer sind <br /> UNSERE COACHES?</h1>
+                <p className='text-white text-start text-md xl:text-xl mt-4 w-full titleProf'>Klick auf das Bild mehr zu erfahren</p>
             </div>
             <div className="h-screen cardProf">
                 <LayoutGrid cards={cards} />

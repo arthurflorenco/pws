@@ -70,6 +70,7 @@ export const Promotion = () => {
                     width={500}
                     height={500}
                     loading='lazy'
+                    priority
                 />
             </div>
         </div>

@@ -11,7 +11,7 @@ export const Hero = () => {
         gsap.registerPlugin(ScrollTrigger);
         gsap.fromTo('.logo-rotate', { scale: 0.5 }, {
             scale: 1,
-            duration: 1.5,
+            duration: 3,
             ease: 'power1.in',
         });
         gsap.to('.logo-rotate', {
@@ -22,7 +22,7 @@ export const Hero = () => {
         })
         gsap.to(['.btn1', '.btn2'], {
             x: 0,
-            duration: 1.5
+            duration: 3
         })
     }, []);
 

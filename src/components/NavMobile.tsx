@@ -59,7 +59,6 @@ export const NavMobile = () => {
                     <div className='h-[1px] w-full border-b-2 border-b-yellow-300' />
                     <div className='w-full pb-10 pt-5 flex flex-col items-start text-lg space-y-4 font-extralight space-grotesk text-start'>
                         <span>ZRH +41 076 816 76 44</span>
-                        <span>ZRH +41 076 563 20 01 </span>
                         <span><Link href='https://www.instagram.com/prayworksleep/'>Instagram</Link> /<Link href='https://www.youtube.com/@jungeausfavela'>Youtube</Link></span>
                         <span>Bändlistrasse 34, 8064 Zürich</span>
                     </div>

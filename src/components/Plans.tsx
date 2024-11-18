@@ -1,5 +1,4 @@
 "use client";
-import Image from "next/image";
 import React, { useEffect } from "react";
 import { Carousel, Card } from "@/components/ui/apple-cards-carousel";
 import imgCard3 from "../assets/imgCard1.webp"

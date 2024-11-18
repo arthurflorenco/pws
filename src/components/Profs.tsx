@@ -60,7 +60,7 @@ const SkeletonOne = () => {
             </p>
             <p className="font-normal text-base text-white">Hallo, Ich bin Giacomo</p>
             <p className="font-normal text-base my-4 max-w-lg text-neutral-200">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia vel nulla eveniet nesciunt eligendi temporibus, alias eos veritatis porro, corporis sapiente, perspiciatis dolor totam? Vitae, delectus. Assumenda alias dicta labore!
+            Als international erfahrener Boxer mit zahlreichen Siegen im Gepäck teile ich meine Begeisterung und mein Know-how für das Boxen mit euch. Für mich steht die Technik im Mittelpunkt - die perfekte Kombination aus präziser Fußarbeit, klugem Timing und kraftvollen Schlägen. Mein Ziel ist es, euch nicht nur fit zu machen, sondern euch die strategische Seite des Boxens näherzubringen. Egal, ob ihr eure ersten Schritte im Ring macht oder bereits fortgeschritten seid - ich unterstütze euch dabei, eure Fähigkeiten auf das nächste Level zu bringen.
             </p>
         </div>)
     );
@@ -74,7 +74,7 @@ const SkeletonTwo = () => {
             </p>
             <p className="font-normal text-base text-white">Hallo, Ich bin Giacomo</p>
             <p className="font-normal text-base my-4 max-w-lg text-neutral-200">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid corrupti cupiditate et, recusandae fuga tempora pariatur qui sapiente eos aperiam expedita fugiat, atque adipisci voluptatum facilis asperiores distinctio molestias magni!
+            Als international erfahrener Boxer mit zahlreichen Siegen im Gepäck teile ich meine Begeisterung und mein Know-how für das Boxen mit euch. Für mich steht die Technik im Mittelpunkt - die perfekte Kombination aus präziser Fußarbeit, klugem Timing und kraftvollen Schlägen. Mein Ziel ist es, euch nicht nur fit zu machen, sondern euch die strategische Seite des Boxens näherzubringen. Egal, ob ihr eure ersten Schritte im Ring macht oder bereits fortgeschritten seid - ich unterstütze euch dabei, eure Fähigkeiten auf das nächste Level zu bringen.
             </p>
         </div>)
     );
@@ -87,7 +87,7 @@ const SkeletonThree = () => {
             </p>
             <p className="font-normal text-base text-white">Hallo, ich bin Manu</p>
             <p className="font-normal text-base my-4 max-w-lg text-neutral-200">
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eum expedita ipsum et officiis animi consectetur mollitia alias corrupti quia, voluptatem doloremque debitis illo! Ex quos eaque et omnis accusamus! Inventore.
+            Mit meiner langjährigen Erfahrung im Boxen, bei der ich nicht nur national, sondern auch international gekämpft und gewonnen habe, möchte ich mein Wissen und meine Leidenschaft an euch weitergeben. Mein Schwerpunkt liegt darauf, euch die Technik des Boxens von Grund auf beizubringen - mit besonderem Fokus auf saubere Bewegungsabläufe, präzise Schläge und viel Fußarbeit. Boxen ist für mich mehr als ein Sport, es ist eine Kunst. Egal, ob ihr Anfänger seid oder schon Erfahrung habt, bei mir lernt ihr, wie ihr im Ring das Beste aus euch herausholt.
             </p>
         </div>)
     );
@@ -100,7 +100,7 @@ const SkeletonFour = () => {
             </p>
             <p className="font-normal text-base text-white">Hallo, Ich bin Manu</p>
             <p className="font-normal text-base my-4 max-w-lg text-neutral-200">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Est rerum voluptates quae natus? Corrupti accusamus sint ab voluptatem vitae odit voluptatibus aperiam cupiditate, est, quo mollitia beatae repudiandae maxime quisquam.
+            Mit meiner langjährigen Erfahrung im Boxen, bei der ich nicht nur national, sondern auch international gekämpft und gewonnen habe, möchte ich mein Wissen und meine Leidenschaft an euch weitergeben. Mein Schwerpunkt liegt darauf, euch die Technik des Boxens von Grund auf beizubringen - mit besonderem Fokus auf saubere Bewegungsabläufe, präzise Schläge und viel Fußarbeit. Boxen ist für mich mehr als ein Sport, es ist eine Kunst. Egal, ob ihr Anfänger seid oder schon Erfahrung habt, bei mir lernt ihr, wie ihr im Ring das Beste aus euch herausholt.
             </p>
         </div>)
     );

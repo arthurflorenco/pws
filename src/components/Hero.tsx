@@ -5,6 +5,7 @@ import logo from '../assets/logo.png'
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useEffect } from 'react';
+import Link from 'next/link';
 
 export const Hero = () => {
     useEffect(() => {
@@ -32,8 +33,10 @@ export const Hero = () => {
                 <Image className='logo-rotate' src={logo} alt='logo' width={600} loading="lazy" />
             </div>
             <div className='md:space-x-5 flex flex-col md:flex-row'>
-                <button className='p-4 rounded-full bg-yellow-300 text-black w-[200px] font-extralight hover:bg-yellow-400 btn1'>Probetraining gefällig?</button>
-                <button className='p-4 rounded-full bg-transparent border-[1px] border-yellow-300 text-yellow-300 w-[200px] font-extralight hover:bg-yellow-400 hover:border-yellow-400 hover:text-black mt-4 md:mt-0 btn2'>Komm vorbei</button>
+                <Link href='https://www.instagram.com/direct/t/17844480402316101'>
+                    <button className='p-4 rounded-full bg-yellow-300 text-black w-[200px] font-extralight hover:bg-yellow-400 btn1'>Probetraining gefällig?</button></Link>
+                <Link href='https://www.instagram.com/direct/t/17844480402316101'>
+                    <button className='p-4 rounded-full bg-transparent border-[1px] border-yellow-300 text-yellow-300 w-[200px] font-extralight hover:bg-yellow-400 hover:border-yellow-400 hover:text-black mt-4 md:mt-0 btn2'>Komm vorbei</button></Link>
             </div>
         </div>
     )

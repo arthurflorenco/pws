@@ -53,7 +53,7 @@ const Card: React.FC = () => {
             </div>
             <div className="flex justify-between items-end p-4">
                 <span className="text-5xl md:text-8xl font-bold text-neutral-600">{time}</span>
-                <Link href="">
+                <Link href="https://www.instagram.com/direct/t/17844480402316101">
                     <button className="bg-neutral-200 bg-opacity-70 backdrop-blur-md p-3 text-neutral-400 rounded-lg">schedule</button>
                 </Link>
             </div>

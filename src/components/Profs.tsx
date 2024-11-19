@@ -3,8 +3,6 @@ import React, { useEffect } from "react";
 import { LayoutGrid } from "./ui/layout-grid";
 import Giacomo from '../assets/giacomo.jpeg'
 import Manu from '../assets/manu.jpeg'
-import toGiacomo from '../assets/toGiacomo.jpeg'
-import toManu from '../assets/toManu.webp'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import '../styles/animations.css'
@@ -70,68 +68,31 @@ const SkeletonTwo = () => {
     return (
         (<div>
             <p className="font-bold md:text-4xl text-xl text-white">
-                Giacomo La Rocca
-            </p>
-            <p className="font-normal text-base text-white">Hallo, Ich bin Giacomo</p>
-            <p className="font-normal text-base my-4 max-w-lg text-neutral-200">
-            Als international erfahrener Boxer mit zahlreichen Siegen im Gepäck teile ich meine Begeisterung und mein Know-how für das Boxen mit euch. Für mich steht die Technik im Mittelpunkt - die perfekte Kombination aus präziser Fußarbeit, klugem Timing und kraftvollen Schlägen. Mein Ziel ist es, euch nicht nur fit zu machen, sondern euch die strategische Seite des Boxens näherzubringen. Egal, ob ihr eure ersten Schritte im Ring macht oder bereits fortgeschritten seid - ich unterstütze euch dabei, eure Fähigkeiten auf das nächste Level zu bringen.
-            </p>
-        </div>)
-    );
-};
-const SkeletonThree = () => {
-    return (
-        (<div>
-            <p className="font-bold md:text-4xl text-xl text-white">
-                Manu
-            </p>
-            <p className="font-normal text-base text-white">Hallo, ich bin Manu</p>
-            <p className="font-normal text-base my-4 max-w-lg text-neutral-200">
-            Mit meiner langjährigen Erfahrung im Boxen, bei der ich nicht nur national, sondern auch international gekämpft und gewonnen habe, möchte ich mein Wissen und meine Leidenschaft an euch weitergeben. Mein Schwerpunkt liegt darauf, euch die Technik des Boxens von Grund auf beizubringen - mit besonderem Fokus auf saubere Bewegungsabläufe, präzise Schläge und viel Fußarbeit. Boxen ist für mich mehr als ein Sport, es ist eine Kunst. Egal, ob ihr Anfänger seid oder schon Erfahrung habt, bei mir lernt ihr, wie ihr im Ring das Beste aus euch herausholt.
-            </p>
-        </div>)
-    );
-};
-const SkeletonFour = () => {
-    return (
-        (<div>
-            <p className="font-bold md:text-4xl text-xl text-white">
                 Manu
             </p>
             <p className="font-normal text-base text-white">Hallo, Ich bin Manu</p>
             <p className="font-normal text-base my-4 max-w-lg text-neutral-200">
-            Mit meiner langjährigen Erfahrung im Boxen, bei der ich nicht nur national, sondern auch international gekämpft und gewonnen habe, möchte ich mein Wissen und meine Leidenschaft an euch weitergeben. Mein Schwerpunkt liegt darauf, euch die Technik des Boxens von Grund auf beizubringen - mit besonderem Fokus auf saubere Bewegungsabläufe, präzise Schläge und viel Fußarbeit. Boxen ist für mich mehr als ein Sport, es ist eine Kunst. Egal, ob ihr Anfänger seid oder schon Erfahrung habt, bei mir lernt ihr, wie ihr im Ring das Beste aus euch herausholt.
+                Mit meiner langjährigen Erfahrung im Boxen, bei der ich nicht nur national, sondern auch international gekämpft und gewonnen habe, möchte ich mein Wissen und meine Leidenschaft an euch weitergeben. Mein Schwerpunkt liegt darauf, euch die Technik des Boxens von Grund auf beizubringen - mit besonderem Fokus auf saubere Bewegungsabläufe, präzise Schläge und viel Fußarbeit. Boxen ist für mich mehr als ein Sport, es ist eine Kunst. Egal, ob ihr Anfänger seid oder schon Erfahrung habt, bei mir lernt ihr, wie ihr im Ring das Beste aus euch herausholt.
             </p>
         </div>)
     );
 };
 
-const cards = [
-    {
-        id: 1,
-        content: <SkeletonOne />,
-        className: "md:col-span-2",
-        thumbnail: toGiacomo,
-    },
-    {
-        id: 2,
-        content: <SkeletonTwo />,
-        className: "col-span-1",
-        thumbnail:
-            Giacomo,
-    },
-    {
-        id: 3,
-        content: <SkeletonThree />,
-        className: "col-span-1",
-        thumbnail:
-            Manu,
-    },
-    {
-        id: 4,
-        content: <SkeletonFour />,
-        className: "md:col-span-2",
-        thumbnail:
-            toManu,
-    },
-];
+
+const cards =  
+   
+    [
+        {
+            id: 1,
+            content: <SkeletonOne />,
+            className: "md:col-span-2",
+            thumbnail: Giacomo,
+        },
+        {
+            id: 2,
+            content: <SkeletonTwo />,
+            className: "col-span-1",
+            thumbnail:
+                Manu,
+        },
+    ];

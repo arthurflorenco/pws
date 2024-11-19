@@ -54,7 +54,7 @@ const Card: React.FC = () => {
             <div className="flex justify-between items-end p-4">
                 <span className="text-5xl md:text-8xl font-bold text-neutral-600">{time}</span>
                 <Link href="https://w.app/PrayWorkSleep">
-                    <button className="bg-neutral-200 bg-opacity-70 backdrop-blur-md p-3 text-neutral-400 rounded-lg">vereinbaren</button>
+                    <button className="bg-neutral-900 bg-opacity-90 backdrop-blur-md p-3 text-white rounded-lg">vereinbaren</button>
                 </Link>
             </div>
         </div>

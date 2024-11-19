@@ -10,11 +10,6 @@ import Link from 'next/link';
 export const Hero = () => {
     useEffect(() => {
         gsap.registerPlugin(ScrollTrigger);
-        gsap.fromTo('.logo-rotate', { scale: 0.5 }, {
-            scale: 1,
-            duration: 3,
-            ease: 'power1.in',
-        });
         gsap.to('.logo-rotate', {
             rotate: 360,
             duration: 100,

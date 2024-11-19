@@ -254,6 +254,12 @@ export const Card = ({
               >
                 {card.title}
               </motion.p>
+              <motion.p
+                layoutId={layout ? `price-${card.price}` : undefined}
+                className="text-6xl md:text-9xl font-normal text-neutral-700 mt-20 dark:text-white"
+              >
+                {card.price}.-
+              </motion.p>
             </motion.div>
           </div>
         )}
@@ -267,7 +273,7 @@ export const Card = ({
         0 bg-gradient-to-b from-black/50 via-transparent to-transparent z-30 pointer-events-none" />
         <div className="relative z-40 p-8 h-full flex flex-col justify-between">
           <div>
-            <motion.p
+          <motion.p
               layoutId={layout ? `title-${card.title}` : undefined}
               className="text-yellow-100 text-xl md:text-3xl font-semibold max-w-xs text-left [text-wrap:balance] font-sans mt-2"
             >

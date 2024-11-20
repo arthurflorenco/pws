@@ -23,7 +23,7 @@ export const Hero = () => {
     }, []);
 
     return (
-        <div className='hero min-h-screen w-svw flex flex-col items-center justify-center'>
+        <div id='home' className='hero min-h-screen w-svw flex flex-col items-center justify-center'>
             <div className='logo-container overflow-hidden'>
                 <Image className='logo-rotate' src={logo} alt='logo' width={600} loading="lazy" />
             </div>

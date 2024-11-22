@@ -9,7 +9,7 @@ import { Profs } from "@/components/Profs";
 import { Promotion } from "@/components/Promotion";
 import { Testimonials } from "@/components/Testimonials";
 import { Transition } from '@/components/ui/Transition';
-import { NavMobile } from '@/components/NavMobile';
+import Menu from '@/components/Menu';
 
 
 export default function Home() {
@@ -21,7 +21,7 @@ export default function Home() {
     const loadPageData = async () => {
       // Simula o carregamento de dados
       await new Promise(resolve => {
-        setTimeout(resolve, 6200); // Tempo de carregamento simulado
+        setTimeout(resolve, 6100); // Tempo de carregamento simulado
       });
       setLoading(false);
       setShowTransition(false); // Esconde a animação após o carregamento
@@ -34,7 +34,7 @@ export default function Home() {
       {showTransition && <Transition ref={transitionRef} />}
       {!loading && !showTransition && (
         <div className="flex flex-col justify-center items-center bg-gradient-to-b from-neutral-800 to-black overflow-hidden">
-          <NavMobile />
+          <Menu />
           <Hero />
           <About />
           <Plans />

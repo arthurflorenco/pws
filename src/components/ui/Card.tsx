@@ -2,46 +2,49 @@
 import React from "react";
 import Link from "next/link";
 
-const Card: React.FC = () => {
+type NextClass = {
+    day: string;
+    time: string;
+};
 
-    const getNextClass = () => {
-        const now = new Date();
-        const dayOfWeek = now.getDay(); // 0 = Domingo, 1 = Segunda, ..., 6 = Sábado
-        const currentTime = now.getHours() * 60 + now.getMinutes(); // Tempo atual em minutos
+const getNextClass = (): NextClass => {
+    const now = new Date();
+    const dayOfWeek = now.getDay(); // 0 = Domingo, 1 = Segunda, ..., 6 = Sábado
+    const currentTime = now.getHours() * 60 + now.getMinutes(); // Tempo atual em minutos
 
-        // Horários das aulas em minutos
-        const classTimes = {
-            Tuesday: { time: '18:30', minutes: 18 * 60 + 30 },
-            Thursday: { time: '18:30', minutes: 18 * 60 + 30 },
-            Sunday: { time: '12:00', minutes: 12 * 60 },
-        };
-
-        // Determina a próxima aula
-        let nextClassDay = '';
-        let nextClassTime = '';
-
-        if (dayOfWeek === 2 && currentTime < classTimes.Tuesday.minutes) {
-            nextClassDay = 'Dienstag';
-            nextClassTime = classTimes.Tuesday.time;
-        } else if (dayOfWeek === 2 && currentTime >= classTimes.Tuesday.minutes) {
-            nextClassDay = 'Donnerstag';
-            nextClassTime = classTimes.Thursday.time;
-        } else if (dayOfWeek === 4 && currentTime < classTimes.Thursday.minutes) {
-            nextClassDay = 'Donnerstag';
-            nextClassTime = classTimes.Thursday.time;
-        } else if (dayOfWeek === 4 && currentTime >= classTimes.Thursday.minutes) {
-            nextClassDay = 'Sonntag';
-            nextClassTime = classTimes.Sunday.time;
-        } else if (dayOfWeek === 0 && currentTime < classTimes.Sunday.minutes) {
-            nextClassDay = 'Sonntag';
-            nextClassTime = classTimes.Sunday.time;
-        } else {
-            nextClassDay = 'Dienstag';
-            nextClassTime = classTimes.Tuesday.time;
-        }
-
-        return { day: nextClassDay, time: nextClassTime };
+    // Horários das aulas em minutos
+    const classTimes: Record<number, { time: string; minutes: number }> = {
+        2: { time: '18:30', minutes: 18 * 60 + 30 }, // Terça
+        4: { time: '18:30', minutes: 18 * 60 + 30 }, // Quinta
+        0: { time: '12:00', minutes: 12 * 60 },       // Domingo
     };
+
+    // Determina a próxima aula
+    let nextClassDay = '';
+    let nextClassTime = '';
+
+    // Verifica se a aula de hoje ainda não passou
+    if (classTimes[dayOfWeek] && currentTime < classTimes[dayOfWeek].minutes) {
+        nextClassDay = dayOfWeek === 2 ? 'Dienstag' : dayOfWeek === 4 ? 'Donnerstags' : 'Sonntag';
+        nextClassTime = classTimes[dayOfWeek].time;
+    } else {
+        // Se a aula de hoje já passou ou não é dia de aula, determina a próxima aula
+        if (dayOfWeek === 0 || dayOfWeek === 4) { // Se hoje é domingo ou quinta
+            nextClassDay = 'Dienstag';
+            nextClassTime = classTimes[2].time;
+        } else if (dayOfWeek === 2) { // Se hoje é terça
+            nextClassDay = 'Donnerstags';
+            nextClassTime = classTimes[4].time;
+        } else { // Se hoje é segunda ou sábado
+            nextClassDay = 'Sonntag';
+            nextClassTime = classTimes[0].time;
+        }
+    }
+
+    return { day: nextClassDay, time: nextClassTime };
+};
+
+const Card = () => {
 
     const { day, time } = getNextClass();
 

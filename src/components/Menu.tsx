@@ -20,7 +20,6 @@ const Menu: React.FC = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false)
     const container = useRef<HTMLDivElement>(null)
     const tl = useRef<gsap.core.Timeline | null>(null)
-    const [text, setText] = useState('Hi👋! I am Arthur');
     gsap.registerPlugin(TextPlugin)
 
     const toggleMenu = () => {
@@ -56,7 +55,7 @@ const Menu: React.FC = () => {
     }, [isMenuOpen])
 
     return (
-        <div ref={container} className='menu-container roboto'>
+        <div ref={container} className='menu-container bebas'>
             <div className="menu-bar">
                 <div className="menu-logo">
                     <Link href='/'>

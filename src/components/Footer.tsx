@@ -14,7 +14,7 @@ export const Footer = () => {
             <div className='flex flex-wrap gap-4 xl:w-[60%] items-center justify-around p-4'>
                 <div className='max-w-40 min-h-48 justify-start  flex flex-col grow-[1] basis-[200]'>
                     <h2 className='text-white text-lg font-bold mb-4'>ADRESSE:</h2>
-                    <address className='text-white text-sm mb-4'>Bändlistrasse 34, 8064 Zürich</address>
+                    <Link href='https://florencostudio.com/'><address className='text-white text-sm mb-4'>Bändlistrasse 34, 8064 Zürich</address></Link>
                 </div>
                 <div className='max-w-40 min-h-48 justify-start items-center flex flex-col grow-[1] basis-[200]'>
                     <h2 className='text-white text-lg font-bold mb-4'>CONTACT:</h2>
@@ -30,7 +30,7 @@ export const Footer = () => {
             </div>
             <div className='text-center mt-7'>
                 <p className='text-white text-sm md:text-md'>&copy; Copyright Pray Work Sleep Gym GmbH 2024</p>
-                <p className='text-white text-sm md:text-md mt-2'>Created by <Link href="https://florencoportfolio.netlify.app/" className='underline'>Florenço&#39;s Studio</Link></p>
+                <p className='text-white text-sm md:text-md mt-2'>Created by <Link href="https://florencostudio.com/" className='underline'>Florenço&#39;s Studio</Link></p>
             </div>
         </div>
     )

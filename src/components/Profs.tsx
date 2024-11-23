@@ -37,7 +37,7 @@ export function Profs() {
     }, [])
 
     return (
-        (<div className="w-full flex flex-col justify-center prof">
+        (<div className="w-full flex flex-col justify-center prof" id="coaches">
             <div className="px-5 flex flex-col justify-center items-start">
                 <span className='text-yellow-100 text-md xl:text-xl font-semibold border-[1px] border-yellow-100 p-3 rounded-xl mb-3 titleProf'>Trainer</span>
                 <h1 className='text-yellow-300 text-5xl md:text-7xl font-bold titleProf'>Wer sind <br /> UNSERE COACHES?</h1>

@@ -13,7 +13,8 @@ const menuLinks = [
     { label: 'STARTSEITE', path: '/', id: '001' },
     { label: 'ÜBER UNS', path: '#about', id: '002' },
     { label: 'PREISE', path: '#plans', id: '003' },
-    { label: 'FRAGEN?', path: '#faq', id: '004' },
+    { label: 'TRAINER', path: '#coaches', id: '004'},
+    { label: 'FRAGEN?', path: '#faq', id: '005' },
 ]
 
 const Menu: React.FC = () => {
@@ -97,6 +98,7 @@ const Menu: React.FC = () => {
                         </div>
                         <div className="menu-info-col gap-3">
                             <a href="tel:+410768167644" className='text-yellow-300 flex uppercase text-xl font-medium leading-[100%]'>Phone <Image src={arrow} height={20} alt='arrow' /></a>
+                            <a href="https://maps.app.goo.gl/28RRG12NoSPrx2hV6" className='text-yellow-300 flex uppercase text-xl font-medium leading-[100%]'>Adresse <Image src={arrow} height={20} alt='arrow' /></a>
                         </div>
                     </div>
                 </div>

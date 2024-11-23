@@ -14,7 +14,7 @@ export const Footer = () => {
             <div className='flex flex-wrap gap-4 xl:w-[60%] items-center justify-around p-4'>
                 <div className='max-w-40 min-h-48 justify-start  flex flex-col grow-[1] basis-[200]'>
                     <h2 className='text-white text-lg font-bold mb-4'>ADRESSE:</h2>
-                    <Link href='https://florencostudio.com/'><address className='text-white text-sm mb-4'>Bändlistrasse 34, 8064 Zürich</address></Link>
+                    <Link href='https://maps.app.goo.gl/28RRG12NoSPrx2hV6'><address className='text-white text-sm mb-4'>Bändlistrasse 34, 8064 Zürich</address></Link>
                 </div>
                 <div className='max-w-40 min-h-48 justify-start items-center flex flex-col grow-[1] basis-[200]'>
                     <h2 className='text-white text-lg font-bold mb-4'>CONTACT:</h2>

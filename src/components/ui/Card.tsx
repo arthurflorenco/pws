@@ -1,5 +1,5 @@
 'use client'
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Link from "next/link";
 
 type NextClass = {
@@ -19,7 +19,6 @@ const getNextClass = (): NextClass => {
         0: { time: '12:00', minutes: 12 * 60 },       // Domingo
     };
 
-    // Determina a próxima aula
     let nextClassDay = '';
     let nextClassTime = '';
 
@@ -29,13 +28,25 @@ const getNextClass = (): NextClass => {
         nextClassTime = classTimes[dayOfWeek].time;
     } else {
         // Se a aula de hoje já passou ou não é dia de aula, determina a próxima aula
-        if (dayOfWeek === 0 || dayOfWeek === 4) { // Se hoje é domingo ou quinta
+        if (dayOfWeek === 0) { // Se hoje é domingo
             nextClassDay = 'Dienstag';
             nextClassTime = classTimes[2].time;
+        } else if (dayOfWeek === 1) { // Se hoje é segunda
+            nextClassDay = 'Sonntag';
+            nextClassTime = classTimes[0].time;
         } else if (dayOfWeek === 2) { // Se hoje é terça
             nextClassDay = 'Donnerstags';
             nextClassTime = classTimes[4].time;
-        } else { // Se hoje é segunda ou sábado
+        } else if (dayOfWeek === 3) { // Se hoje é quarta
+            nextClassDay = 'Donnerstags';
+            nextClassTime = classTimes[4].time;
+        } else if (dayOfWeek === 4) { // Se hoje é quinta
+            nextClassDay = 'Sonntag';
+            nextClassTime = classTimes[0].time;
+        } else if (dayOfWeek === 5) { // Se hoje é sexta
+            nextClassDay = 'Sonntag';
+            nextClassTime = classTimes[0].time;
+        } else if (dayOfWeek === 6) { // Se hoje é sábado
             nextClassDay = 'Sonntag';
             nextClassTime = classTimes[0].time;
         }
@@ -45,19 +56,30 @@ const getNextClass = (): NextClass => {
 };
 
 const Card = () => {
+    const [nextClass, setNextClass] = useState<NextClass>(getNextClass());
 
-    const { day, time } = getNextClass();
+    useEffect(() => {
+        // Atualiza a próxima aula ao montar o componente
+        setNextClass(getNextClass());
+
+        // Atualiza a próxima aula a cada segundo
+        const interval = setInterval(() => {
+            setNextClass(getNextClass());
+        }, 1000);
+
+        return () => clearInterval(interval); // Limpa o intervalo ao desmontar o componente
+    }, []);
 
     return (
-        <div className="flex flex-col justify-between  w-full bg-gradient-to-b from-yellow-50 to-yellow-300 bg-opacity-70 backdrop-blur-md rounded-3xl md:m-4">
+        <div className="flex flex-col justify-between w-full bg-gradient-to-b from-yellow-50 to-yellow-300 bg-opacity-70 backdrop-blur-md rounded-3xl md:m-4">
             <div className="flex flex-col p-4">
                 <span className="font-bold text-neutral-500 text-3xl">Nächstes Training</span>
-                <span className="font-bold text-lg text-neutral-400">{day}</span>
+                <span className="font-bold text-lg text-neutral-400">{nextClass.day}</span>
             </div>
             <div className="flex justify-between items-end p-4">
-                <span className="text-5xl md:text-8xl font-bold text-neutral-600">{time}</span>
-                <Link href="https://w.app/PrayWorkSleep">
-                    <button className="bg-white bg-opacity-90 backdrop-blur-md p-3 text-black rounded-lg">vereinbaren</button>
+                <span className="text-5xl md:text-8xl font-bold text-neutral-600">{nextClass.time}</span>
+                <Link href="https://wa.me/410768167644">
+                    <button className ="bg-white bg-opacity-90 backdrop-blur-md p-3 text-black rounded-lg">vereinbaren</button>
                 </Link>
             </div>
         </div>

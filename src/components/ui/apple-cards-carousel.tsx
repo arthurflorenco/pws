@@ -18,6 +18,7 @@ import Image, { ImageProps, StaticImageData } from "next/image";
 import { useOutsideClick } from "../../hooks/use-outside-click";
 import gsap from 'gsap'
 import ScrollTrigger from "gsap/ScrollTrigger";
+import Link from "next/link";
 
 interface CarouselProps {
   items: JSX.Element[];
@@ -97,7 +98,7 @@ export const Carousel = ({ items, initialScroll = 0 }: CarouselProps) => {
       duration: 0.5,
       ease: 'power1.inOut',
       stagger: 0.2,
-      
+
       scrollTrigger: {
         trigger: '.card-plans',
         start: 'top 80%',
@@ -131,6 +132,7 @@ export const Carousel = ({ items, initialScroll = 0 }: CarouselProps) => {
             )}
           >
             {items.map((item, index) => (
+
               <motion.div
                 initial={{
                   opacity: 0,
@@ -149,8 +151,9 @@ export const Carousel = ({ items, initialScroll = 0 }: CarouselProps) => {
                 key={"card" + index}
                 className="last:pr-[5%] md:last:pr-[33%] rounded-3xl card-plans"
               >
-                {item}
+                <Link href="https://www.sportsnow.ch/go/pray-work-sleep/prices?locale=de">{item}</Link>
               </motion.div>
+
             ))}
           </div>
         </div>
@@ -273,7 +276,7 @@ export const Card = ({
         0 bg-gradient-to-b from-black/50 via-transparent to-transparent z-30 pointer-events-none" />
         <div className="relative z-40 p-8 h-full flex flex-col justify-between">
           <div>
-          <motion.p
+            <motion.p
               layoutId={layout ? `title-${card.title}` : undefined}
               className="text-yellow-100 text-xl md:text-3xl font-semibold max-w-xs text-left [text-wrap:balance] font-sans mt-2"
             >

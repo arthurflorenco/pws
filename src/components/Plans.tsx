@@ -14,8 +14,8 @@ export const Plans = () => {
 
     useEffect(() => {
         gsap.registerPlugin(ScrollTrigger)
-        gsap.fromTo('.textPlans',{opacity:0}, {
-            opacity:1,
+        gsap.fromTo('.textPlans', { opacity: 0 }, {
+            opacity: 1,
             y: 0,
             duration: 3,
             zIndex: 1,
@@ -23,12 +23,12 @@ export const Plans = () => {
                 trigger: '.title-text',
                 start: 'top 80%',
                 end: 'bottom 70%',
-                scrub :true
+                scrub: true
             }
         })
 
-        gsap.fromTo('.titlePlans',{opacity:0} ,{
-            opacity:1,
+        gsap.fromTo('.titlePlans', { opacity: 0 }, {
+            opacity: 1,
             y: 0,
             duration: 2,
             zIndex: 1,
@@ -53,9 +53,9 @@ export const Plans = () => {
         <div className="w-full h-full py-20 plans" id="plans">
             <div className="flex flex-col items-start px-3 md:items-center justify-center text-start md:text-center title-text">
                 <span className='text-yellow-100 text-md xl:text-xl font-semibold border-[1px] border-yellow-100 p-3 rounded-xl mb-3 titlePlans'>Unsere Pläne</span>
-                <h1 className='text-yellow-300 text-5xl md:text-7xl font-bold titlePlans z-30'>1 Monat Gratis Für Neue Mitglieder</h1>
+                <h1 className='text-yellow-300 text-5xl md:text-7xl font-bold titlePlans z-30'>Erschwingliche Trainingspläne für alle</h1>
                 <p className='text-white text-md xl:text-xl mt-4 textPlans'>
-                    Wenn du von einem Mitglied weiterempfohlen wirst und dich anmeldest, bekommst du den ersten Monat gratis. So kannst du den Club in Ruhe ausprobieren und leicht ins Training starten!
+                    Trainiere mit den Besten und entwickle dich in deinem eigenen Tempo! Wir bieten flexible Tarife für Anfänger und erfahrene Athleten, mit dynamischen Trainings, professioneller Betreuung und einer erstklassigen Ausstattung, damit du deine Boxziele erreichen kannst.
                 </p>
             </div>
             <Carousel items={cards} />
@@ -68,27 +68,26 @@ export const Plans = () => {
 const data = [
     {
         category: "",
+        title: "1 Monat Abonnement",
+        src: imgCard4,
+        price: 200,
+    },
+    {
+        category: "",
         title: "3 Monats Abonnement",
         src: imgCard1,
-        price: 220,
+        price: 400,
     },
     {
         category: "",
         title: "6 Monats Abonnement",
         src: imgCard2,
-        price: 390,
+        price: 600,
     },
     {
         category: "",
         title: "12 Monats Abonnement",
         src: imgCard3,
-        price:699,
-    },
-
-    {
-        category: "1h training",
-        title: "Gruppentraining/ Lektion",
-        src: imgCard4,
-        price: 20,
+        price: 900,
     },
 ];

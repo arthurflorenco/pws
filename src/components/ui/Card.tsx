@@ -71,14 +71,14 @@ const Card = () => {
     }, []);
 
     return (
-        <div className="flex flex-col justify-between w-full bg-gradient-to-b from-yellow-50 to-yellow-300 bg-opacity-70 backdrop-blur-md rounded-3xl md:m-4">
+        <div className="flex flex-col justify-between w-full bg-gradient-to-b from-yellow-50 to-yellow-300 bg-opacity-70 backdrop-blur-md rounded-3xl mt-4">
             <div className="flex flex-col p-4">
                 <span className="font-bold text-neutral-500 text-3xl">Nächstes Training</span>
                 <span className="font-bold text-lg text-neutral-400">{nextClass.day}</span>
             </div>
             <div className="flex justify-between items-end p-4">
                 <span className="text-5xl md:text-8xl font-bold text-neutral-600">{nextClass.time}</span>
-                <Link href="https://wa.me/410768167644">
+                <Link href="https://www.sportsnow.ch/go/pray-work-sleep/prices?locale=de">
                     <button className ="bg-white bg-opacity-90 backdrop-blur-md p-3 text-black rounded-lg">vereinbaren</button>
                 </Link>
             </div>

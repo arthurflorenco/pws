@@ -12,7 +12,7 @@ import logo from '../assets/logo.png'
 const menuLinks = [
     { label: 'STARTSEITE', path: '/', id: '001' },
     { label: 'ÜBER UNS', path: '#about', id: '002' },
-    { label: 'PREISE', path: '#plans', id: '003' },
+    { label: 'PREISE', path: 'https://www.sportsnow.ch/go/pray-work-sleep/prices?locale=de', id: '003' },
     { label: 'TRAINER', path: '#coaches', id: '004'},
     { label: 'FRAGEN?', path: '#faq', id: '005' },
 ]
